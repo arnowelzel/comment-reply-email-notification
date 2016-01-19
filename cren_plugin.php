@@ -40,7 +40,7 @@ load_plugin_textdomain('cren_plugin', false, basename(dirname( __FILE__ )) . '/i
 add_action('wp_insert_comment',    'cren_comment_notification',  99, 2);
 add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
 
-add_filter('wp_mail_content_type', function($contentType ) { return 'text/html'; });
+add_filter('wp_mail_content_type', function($contentType) { return 'text/html'; });
 
 /**
  * Sends an email notification when a comment receives a reply
@@ -52,8 +52,8 @@ function cren_comment_notification($commentId, $comment) {
     if ($comment->comment_approved == 1 && $comment->comment_parent > 0) {
         $parent = get_comment($comment->comment_parent);
 
-        $body  = 'Hi ' . $parent->comment_author . ',';
-        $body .= '<br><br>' . $comment->comment_author . ' has replied to your comment on ';
+        $body  = __('Hi ', 'cren_plugin') . $parent->comment_author . ',';
+        $body .= '<br><br>' . $comment->comment_author . __(' has replied to your comment on ', 'cren_plugin');
         $body .= '<a href="' . get_permalink($parent->comment_post_ID) . '">' . get_the_title($parent->comment_post_ID) . '</a>';
         $body .= '<br><br><em>"' . esc_html($comment->comment_content) . '"</em>';
         $body .= '<br><br><a href="' . get_comment_link($parent->comment_ID) . '">' . __('Click here to reply', 'cren_plugin') . '</a>';

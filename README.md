@@ -16,4 +16,5 @@ How to install the plugin:
 4. For better results, setup a plugin to send emails using SMTP.
 
 ## Changelog
+* 1.1.0: added ES and PT-BR translations, added build script
 * 1.0.0: First release

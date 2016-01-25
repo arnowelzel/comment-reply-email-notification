@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.0.0
+ * Version:       1.1.0
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -35,7 +35,7 @@
  *
  */
 
-load_plugin_textdomain('cren_plugin', false, basename(dirname( __FILE__ )) . '/i18n');
+load_plugin_textdomain('cren-plugin', false, basename(dirname(__FILE__)) . '/i18n/');
 
 add_action('wp_insert_comment',    'cren_comment_notification',  99, 2);
 add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
@@ -52,14 +52,14 @@ function cren_comment_notification($commentId, $comment) {
     if ($comment->comment_approved == 1 && $comment->comment_parent > 0) {
         $parent = get_comment($comment->comment_parent);
 
-        $body  = __('Hi ', 'cren_plugin') . $parent->comment_author . ',';
-        $body .= '<br><br>' . $comment->comment_author . __(' has replied to your comment on ', 'cren_plugin');
+        $body  = __('Hi ', 'cren-plugin') . $parent->comment_author . ',';
+        $body .= '<br><br>' . $comment->comment_author . __(' has replied to your comment on ', 'cren-plugin');
         $body .= '<a href="' . get_permalink($parent->comment_post_ID) . '">' . get_the_title($parent->comment_post_ID) . '</a>';
         $body .= '<br><br><em>"' . esc_html($comment->comment_content) . '"</em>';
-        $body .= '<br><br><a href="' . get_comment_link($parent->comment_ID) . '">' . __('Click here to reply', 'cren_plugin') . '</a>';
+        $body .= '<br><br><a href="' . get_comment_link($parent->comment_ID) . '">' . __('Click here to reply', 'cren-plugin') . '</a>';
 
         $email = $parent->comment_author_email;
-        $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren_plugin', $body);
+        $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
 
         wp_mail($email, $title, $body);
     }

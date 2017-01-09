@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.1.1
+ * Version:       1.2.0
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -42,6 +42,9 @@ add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
 
 add_filter('wp_mail_content_type', function($contentType) { return 'text/html'; });
 
+add_filter('comment_form_default_fields', 'cren_comment_fields');
+add_action('comment_post', 'cren_persist_subscription_opt_in');
+
 /**
  * Sends an email notification when a comment receives a reply
  * @param  int    $commentId The comment ID
@@ -51,6 +54,13 @@ add_filter('wp_mail_content_type', function($contentType) { return 'text/html'; 
 function cren_comment_notification($commentId, $comment) {
     if ($comment->comment_approved == 1 && $comment->comment_parent > 0) {
         $parent = get_comment($comment->comment_parent);
+
+        $subscription = get_comment_meta($parent->comment_ID, 'cren_subscribe_to_comment', true);
+
+        // If we don't find the option, we assume the user is subscribed.
+        if ($subscription && $subscription == 'off') {
+            return false;
+        }
 
         $body  = __('Hi ', 'cren-plugin') . $parent->comment_author . ',';
         $body .= '<br><br>' . $comment->comment_author . __(' has replied to your comment on ', 'cren-plugin');
@@ -75,6 +85,30 @@ function cren_comment_status_update($commentId, $commentStatus) {
     $comment = get_comment($commentId);
 
     if ($commentStatus == 'approve') {
-        cren_comment_notification($comment->comment_id, $comment);
+        cren_comment_notification($comment->comment_ID, $comment);
     }
+}
+
+/**
+ * Adds a checkbox to the comment form which allows the user to not receive
+ * new replies
+ * @param  array $fields The default form fields
+ * @return array
+ */
+function cren_comment_fields($fields) {
+    $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
+      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"' . $aria_req . ' checked>' . __( 'Subscribe to comment' ) . ' <span class="required">*</span></label>
+      </p>';
+
+    return $fields;
+}
+
+/**
+ * Persists the customer choice.
+ * @param  int $commentId The comment ID
+ * @return boolean
+ */
+function cren_persist_subscription_opt_in($commentId) {
+    $value = (isset($_POST['cren_subscribe_to_comment']) && $_POST['cren_subscribe_to_comment'] == 'on') ? 'on' : 'off';
+    return add_comment_meta($commentId, 'cren_subscribe_to_comment', $value, true);
 }

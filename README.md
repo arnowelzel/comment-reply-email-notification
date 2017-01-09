@@ -16,6 +16,7 @@ How to install the plugin:
 4. For better results, setup a plugin to send emails using SMTP.
 
 ## Changelog
+* 1.2.0: added opt-in checkbox to comment form.
 * 1.1.1: fixed typo in hook
 * 1.1.0: added ES and PT-BR translations, added build script
 * 1.0.0: First release

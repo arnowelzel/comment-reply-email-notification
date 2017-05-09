@@ -4,7 +4,7 @@ Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 4.7
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -13,7 +13,7 @@ License URI: http://opensource.org/licenses/BSD-3-Clause
 This plugin notifies a comment author via email when someone replies to his comment.
 
 == Requirements ==
-* PHP 5.5+
+* PHP 5.6+
 * Wordpress 4.4+
 
 == Installation ==
@@ -26,6 +26,9 @@ How to install the plugin:
 4. For better results, setup a plugin to send emails using SMTP.
 
 == Changelog ==
+= 1.3.1 =
+* Fixed missing variable on checkbox template
+* Fixed notification being sent to the comment author when he replies his own comment
 = 1.3.0 =
 * Fixed opt-in checkbox for logged in users
 * Added Russian and Ukrainian translations (thanks to Oleh Astappiev!)

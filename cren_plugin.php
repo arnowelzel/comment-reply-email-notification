@@ -3,12 +3,12 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.2.0
+ * Version:       1.3.0
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
  *
- * Copyright (c) 2016, Gustavo H. Mascarenhas Machado
+ * Copyright (c) 2016-2017, Gustavo H. Mascarenhas Machado
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -43,10 +43,15 @@ add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
 add_filter('wp_mail_content_type', function($contentType) { return 'text/html'; });
 
 add_filter('comment_form_default_fields', 'cren_comment_fields');
+add_filter('comment_form_submit_field', 'cren_comment_fields_logged_in');
+
 add_action('comment_post', 'cren_persist_subscription_opt_in');
+
+add_action('init', 'cren_unsubscribe_route');
 
 /**
  * Sends an email notification when a comment receives a reply
+ *
  * @param  int    $commentId The comment ID
  * @param  object $comment   The comment object
  * @return boolean
@@ -68,10 +73,76 @@ function cren_comment_notification($commentId, $comment) {
         $body .= '<br><br><em>"' . esc_html($comment->comment_content) . '"</em>';
         $body .= '<br><br><a href="' . get_comment_link($parent->comment_ID) . '">' . __('Click here to reply', 'cren-plugin') . '</a>';
 
+        $body .= '<br><a href="' . cren_get_unsubscribe_link($parent) . '">' . __('Click here to stop receiving these messages', 'cren-plugin') . '</a>';
+
         $email = $parent->comment_author_email;
         $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
 
         wp_mail($email, $title, $body);
+    }
+}
+
+/**
+ * Generates the unsubscribe link for a comment/user.
+ *
+ * @param  StdClass $comment The comment object
+ * @return string
+ */
+function cren_get_unsubscribe_link($comment) {
+    $key = cren_secret_key($comment->comment_ID);
+
+    $params = [
+        'comment' => $comment->comment_ID
+      , 'key'     => $key
+    ];
+
+    $uri = site_url() . '/cren/unsubscribe?' . http_build_query($params);
+
+    return $uri;
+}
+
+/**
+ * Generates a secret key to validate the requests
+ *
+ * @param  int    $commentId The comment ID
+ * @return string
+ */
+function cren_secret_key($commentId) {
+    return hash_hmac('sha512', $commentId, wp_salt(), false);
+}
+
+/**
+ * Processes the unsubscribe request.
+ *
+ * @return void
+ */
+function cren_unsubscribe_route() {
+    $requestUri = $_SERVER['REQUEST_URI'];
+
+    if (preg_match('/cren\/unsubscribe/', $requestUri)) {
+        $commentId = filter_input(INPUT_GET, 'comment', FILTER_SANITIZE_NUMBER_INT);
+        $comment   = get_comment($commentId);
+
+        if (!$comment) {
+            echo 'Invalid request.';
+            exit;
+        }
+
+        $userKey = filter_input(INPUT_GET, 'key', FILTER_SANITIZE_STRING);
+        $realKey = cren_secret_key($commentId);
+
+        if ($userKey != $realKey) {
+            echo 'Invalid request.';
+            exit;
+        }
+
+        $uri = get_permalink($comment->comment_post_ID);
+
+        cren_persist_subscription_opt_out($commentId);
+
+        echo '<p>' . __('Your subscription for this comment has been cancelled.') . '</p>';
+        echo '<script type="text/javascript">setTimeout(function() { window.location.href="' . $uri . '"; }, 3000);</script>';
+        exit;
     }
 }
 
@@ -91,7 +162,8 @@ function cren_comment_status_update($commentId, $commentStatus) {
 
 /**
  * Adds a checkbox to the comment form which allows the user to not receive
- * new replies
+ * new replies.
+ *
  * @param  array $fields The default form fields
  * @return array
  */
@@ -104,11 +176,40 @@ function cren_comment_fields($fields) {
 }
 
 /**
+ * Adds a checkbox to the logged in comment form which allows the user to not
+ * receive new replies.
+ *
+ * Uses the comment form submit hook as a workaround for logged in users.
+ *
+ * @param  string $submitField
+ * @return string
+ */
+function cren_comment_fields_logged_in($submitField) {
+    if (is_user_logged_in()) {
+        $checkbox = '<p class="comment-form-comment-subscribe">'.
+            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"' . $aria_req . ' checked>' . __('Subscribe to comment' ) . ' <span class="required">*</span></label></p>';
+    }
+
+    return $checkbox . $submitField;
+}
+
+/**
  * Persists the customer choice.
- * @param  int $commentId The comment ID
+ *
+ * @param  int     $commentId The comment ID
  * @return boolean
  */
 function cren_persist_subscription_opt_in($commentId) {
     $value = (isset($_POST['cren_subscribe_to_comment']) && $_POST['cren_subscribe_to_comment'] == 'on') ? 'on' : 'off';
     return add_comment_meta($commentId, 'cren_subscribe_to_comment', $value, true);
+}
+
+/**
+ * Persists the customer subscription removal.
+ *
+ * @param  int     $commentId The comment ID
+ * @return boolean
+ */
+function cren_persist_subscription_opt_out($commentId) {
+    return add_comment_meta($commentId, 'cren_subscribe_to_comment', 'off   ', true);
 }

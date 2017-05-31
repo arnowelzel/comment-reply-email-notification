@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.3.1
+ * Version:       1.3.2
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -39,8 +39,6 @@ load_plugin_textdomain('cren-plugin', false, basename(dirname(__FILE__)) . '/i18
 
 add_action('wp_insert_comment',    'cren_comment_notification',  99, 2);
 add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
-
-add_filter('wp_mail_content_type', function($contentType) { return 'text/html'; });
 
 add_filter('comment_form_default_fields', 'cren_comment_fields');
 add_filter('comment_form_submit_field', 'cren_comment_fields_logged_in');
@@ -84,8 +82,21 @@ function cren_comment_notification($commentId, $comment) {
 
         $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
 
+        add_filter('wp_mail_content_type', 'cren_wp_mail_content_type_filter');
+
         wp_mail($email, $title, $body);
+
+        remove_filter('wp_mail_content_type', 'cren_wp_mail_content_type_filter');
     }
+}
+
+/**
+ * Filter that changes the email content type when the notification is sent.
+ * @param  string $contentType The content type
+ * @return string
+ */
+function cren_wp_mail_content_type_filter($contentType) {
+    return 'text/html';
 }
 
 /**
@@ -175,8 +186,7 @@ function cren_comment_status_update($commentId, $commentStatus) {
  */
 function cren_comment_fields($fields) {
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
-      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __( 'Subscribe to comment' ) . ' <span class="required">*</span></label>
-      </p>';
+      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __( 'Subscribe to comment' ) . '</label></p>';
 
     return $fields;
 }
@@ -193,7 +203,7 @@ function cren_comment_fields($fields) {
 function cren_comment_fields_logged_in($submitField) {
     if (is_user_logged_in()) {
         $checkbox = '<p class="comment-form-comment-subscribe">'.
-            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment' ) . ' <span class="required">*</span></label></p>';
+            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment' ) . '</label></p>';
     }
 
     return $checkbox . $submitField;

@@ -18,15 +18,19 @@ msgstr ""
 
 #: cren_plugin.php:55
 msgid "Hi "
-msgstr "Olá"
+msgstr "Olá "
 
 #: cren_plugin.php:56
 msgid " has replied to your comment on "
-msgstr "respondeu seu comentário em "
+msgstr " respondeu seu comentário em "
 
 #: cren_plugin.php:59
 msgid "Click here to reply"
 msgstr "Clique aqui para responder"
+
+#: cren_plugin.php:
+msgid "Click here to stop receiving these messages"
+msgid "Clique aqui para parar de receber estas mensagens"
 
 #: cren_plugin.php:62
 msgid "New reply to your comment"

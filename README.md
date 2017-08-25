@@ -16,6 +16,7 @@ How to install the plugin:
 4. For better results, setup a plugin to send emails using SMTP.
 
 ## Changelog
+* 1.3.3: updated translations and translation domain
 * 1.3.2: fixed email content type filter interfering with other emails; removed asterisk from comment form subscription checkbox
 * 1.3.1: fixed missing variable on checkbox template; fixed notification being sent to the comment author when he replies his own comment
 * 1.3.0: fixed opt-in checkbox for logged in users; added Russian and Ukrainian translations (thanks to Oleh Astappiev!) added unsubscribe link to email

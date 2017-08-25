@@ -4,7 +4,7 @@ Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 4.8
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -26,6 +26,8 @@ How to install the plugin:
 4. For better results, setup a plugin to send emails using SMTP.
 
 == Changelog ==
+= 1.3.3 =
+* Updated translations and translation domain
 = 1.3.2 =
 * Fixed email content type filter interfering with other emails
 * Removed asterisk from comment form subscription checkbox

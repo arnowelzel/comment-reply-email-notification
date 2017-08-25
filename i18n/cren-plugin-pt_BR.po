@@ -28,13 +28,21 @@ msgstr " respondeu seu comentário em "
 msgid "Click here to reply"
 msgstr "Clique aqui para responder"
 
-#: cren_plugin.php:
-msgid "Click here to stop receiving these messages"
-msgid "Clique aqui para parar de receber estas mensagens"
-
 #: cren_plugin.php:62
 msgid "New reply to your comment"
 msgstr "Nova resposta em seu comentário"
+
+#: cren_plugin.php:81
+msgid "Click here to stop receiving these messages"
+msgstr "Clique aqui para não receber mais este tipo de mensagem"
+
+#: cren_plugin.php:160
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Sua inscrição para este comentário foi cancelada"
+
+#: cren_plugin.php:189
+msgid "Subscribe to comment"
+msgstr "Notifique-me por email quando este comentário for respondido"
 
 #. Plugin Name of the plugin/theme
 msgid "Comment Reply Email Notification"

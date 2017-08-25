@@ -157,7 +157,7 @@ function cren_unsubscribe_route() {
 
         cren_persist_subscription_opt_out($commentId);
 
-        echo '<p>' . __('Your subscription for this comment has been cancelled.') . '</p>';
+        echo '<p>' . __('Your subscription for this comment has been cancelled.' , 'cren-plugin') . '</p>';
         echo '<script type="text/javascript">setTimeout(function() { window.location.href="' . $uri . '"; }, 3000);</script>';
         exit;
     }
@@ -186,7 +186,7 @@ function cren_comment_status_update($commentId, $commentStatus) {
  */
 function cren_comment_fields($fields) {
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
-      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __( 'Subscribe to comment' ) . '</label></p>';
+      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment' , 'cren-plugin') . '</label></p>';
 
     return $fields;
 }
@@ -203,7 +203,7 @@ function cren_comment_fields($fields) {
 function cren_comment_fields_logged_in($submitField) {
     if (is_user_logged_in()) {
         $checkbox = '<p class="comment-form-comment-subscribe">'.
-            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment' ) . '</label></p>';
+            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment', 'cren-plugin') . '</label></p>';
     }
 
     return $checkbox . $submitField;

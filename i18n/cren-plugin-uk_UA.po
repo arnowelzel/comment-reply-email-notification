@@ -19,12 +19,12 @@ msgstr ""
 "Language: uk_UA\n"
 
 #: cren_plugin.php:55
-msgid "Hi "
-msgstr "Вітаємо "
+msgid "Hi %s"
+msgstr "Вітаємо %s"
 
 #: cren_plugin.php:56
-msgid " has replied to your comment on "
-msgstr " відповів на ваш коментар "
+msgid "%s has replied to your comment on"
+msgstr "%s відповів на ваш коментар"
 
 #: cren_plugin.php:59
 msgid "Click here to reply"

@@ -17,12 +17,12 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: cren_plugin.php:55
-msgid "Hi "
-msgstr "Olá "
+msgid "Hi %s"
+msgstr "Olá %s"
 
 #: cren_plugin.php:56
-msgid " has replied to your comment on "
-msgstr " respondeu seu comentário em "
+msgid "%s has replied to your comment on"
+msgstr "%s respondeu seu comentário em"
 
 #: cren_plugin.php:59
 msgid "Click here to reply"

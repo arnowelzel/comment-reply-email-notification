@@ -18,12 +18,12 @@ msgstr ""
 "Language: nl_NL\n"
 
 #: cren_plugin.php:55
-msgid "Hi "
-msgstr "Hoi"
+msgid "Hi %s"
+msgstr "Hoi %s"
 
 #: cren_plugin.php:56
-msgid " has replied to your comment on "
-msgstr " heeft een reactie gegeven op jouw reactie op "
+msgid "%s has replied to your comment on"
+msgstr "%s heeft een reactie gegeven op jouw reactie op"
 
 #: cren_plugin.php:59
 msgid "Click here to reply"

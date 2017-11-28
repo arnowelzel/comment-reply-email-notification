@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.3.3
+ * Version:       1.4.0
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -72,13 +72,9 @@ function cren_comment_notification($commentId, $comment) {
             return false;
         }
 
-        $body  = __('Hi ', 'cren-plugin') . $parent->comment_author . ',';
-        $body .= '<br><br>' . $comment->comment_author . __(' has replied to your comment on ', 'cren-plugin');
-        $body .= '<a href="' . get_permalink($parent->comment_post_ID) . '">' . get_the_title($parent->comment_post_ID) . '</a>';
-        $body .= '<br><br><em>"' . esc_html($comment->comment_content) . '"</em>';
-        $body .= '<br><br><a href="' . get_comment_link($parent->comment_ID) . '">' . __('Click here to reply', 'cren-plugin') . '</a>';
-
-        $body .= '<br><a href="' . cren_get_unsubscribe_link($parent) . '">' . __('Click here to stop receiving these messages', 'cren-plugin') . '</a>';
+        ob_start();
+        require cren_notification_template_path();
+        $body = ob_get_clean();
 
         $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
 
@@ -88,6 +84,22 @@ function cren_comment_notification($commentId, $comment) {
 
         remove_filter('wp_mail_content_type', 'cren_wp_mail_content_type_filter');
     }
+}
+
+/**
+ * Returns the notification template path. It's either a custom one, located at
+ * wp-content/themes/[THEME]/templates/notification.php or the default one, located
+ * at wp-content/plugins/comment-reply-email-notification/templates/notification.php.
+ * @return string
+ */
+function cren_notification_template_path() {
+    $customTemplate = locate_template('templates/cren/notification.php');
+
+    if ($customTemplate) {
+        return $customTemplate;
+    }
+
+    return __DIR__ . '/templates/cren/notification.php';
 }
 
 /**
@@ -227,5 +239,5 @@ function cren_persist_subscription_opt_in($commentId) {
  * @return boolean
  */
 function cren_persist_subscription_opt_out($commentId) {
-    return add_comment_meta($commentId, 'cren_subscribe_to_comment', 'off   ', true);
+    return update_comment_meta($commentId, 'cren_subscribe_to_comment', 'off');
 }

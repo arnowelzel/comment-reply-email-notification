@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.4.0
+ * Version:       1.4.1
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -169,8 +169,10 @@ function cren_unsubscribe_route() {
 
         cren_persist_subscription_opt_out($commentId);
 
+        echo '<!doctype html><html><head><meta charset="utf-8"><title>' . get_bloginfo('name') . '</title></head><body>';
         echo '<p>' . __('Your subscription for this comment has been cancelled.' , 'cren-plugin') . '</p>';
         echo '<script type="text/javascript">setTimeout(function() { window.location.href="' . $uri . '"; }, 3000);</script>';
+        echo '</body></html>';
         exit;
     }
 }

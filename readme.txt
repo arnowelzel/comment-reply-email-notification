@@ -3,8 +3,8 @@ Contributors: Gustavo H. Mascarenhas Machado
 Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 4.9
-Stable tag: 1.4.0
+Tested up to: 4.9.1
+Stable tag: 1.4.1
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -36,6 +36,8 @@ To customize the email template, copy the "templates" folder to your theme folde
 Templates folder on GitHub: https://github.com/guhemama/worpdress-comment-reply-email-notification/tree/master/templates
 
 == Changelog ==
+= 1.4.1 =
+* Fixed unsubscribe page template
 = 1.4.0 =
 * Added the ability to use a custom email template
 * Added plugin rendering options

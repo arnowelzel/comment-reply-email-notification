@@ -38,6 +38,7 @@ Templates folder on GitHub: https://github.com/guhemama/worpdress-comment-reply-
 == Changelog ==
 = 1.4.4 =
 * Fixed undefined variable
+* Updated French translation
 = 1.4.3 =
 * Updated Spanish translation
 * Added German translation (thanks to Nathanael Dalliard!)

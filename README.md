@@ -24,7 +24,7 @@ This plugin uses the `wp_insert_comment` hook, therefore, everytime a comment is
 To customize the email template, copy the `templates` folder to your theme folder. The plugin will look for templates on the `/wp-content/themes/[THEME]/templates/cren/` folder; if a custom template is not found, then it will fallback to the default template.
 
 ## Changelog
-* 1.4.4: fixed undefined variable
+* 1.4.4: fixed undefined variable; updated French translation
 * 1.4.3: updated Spanish translation, added German translation  (thanks to Nathanael Dalliard!)
 * 1.4.2: added French translation
 * 1.4.1: fixed unsubscribe page template

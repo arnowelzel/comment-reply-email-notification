@@ -51,7 +51,7 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY
 
 == Changelog ==
 = 1.6.0 =
-* Added Turkish translation
+* Added Turkish translation (thanks Bünyamin Yildirim!)
 * Added filters to the checkbox label
 * Added GDPR box
 * Added admin settings page

@@ -39,7 +39,7 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 
 
 ## Changelog
-* 1.6.0: added Turkish translation; added filters to the checkbox label; added GDPR box; added admin settings page; decode HTML entities on email title
+* 1.6.0: added Turkish translation (thanks Bünyamin Yildirim!); added filters to the checkbox label; added GDPR box; added admin settings page; decode HTML entities on email title
 * 1.5.0: added Italian translation (thanks Giacomo Bellisi!); added Hebrew translation (thanks Lea Cohen!)
 * 1.4.4: fixed undefined variable; updated French translation
 * 1.4.3: updated Spanish translation, added German translation  (thanks to Nathanael Dalliard!)

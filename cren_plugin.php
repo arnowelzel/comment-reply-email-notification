@@ -40,6 +40,8 @@ load_plugin_textdomain('cren-plugin', false, basename(dirname(__FILE__)) . '/i18
 add_action('wp_insert_comment',    'cren_comment_notification',  99, 2);
 add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
 
+add_filter('preprocess_comment', 'cren_verify_comment_meta_data');
+
 add_filter('comment_form_default_fields', 'cren_comment_fields');
 add_filter('comment_form_submit_field', 'cren_comment_fields_logged_in');
 
@@ -76,7 +78,7 @@ function cren_comment_notification($commentId, $comment) {
         require cren_notification_template_path();
         $body = ob_get_clean();
 
-        $title = get_option('blogname') . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
+        $title = html_entity_decode(get_option('blogname')) . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
 
         add_filter('wp_mail_content_type', 'cren_wp_mail_content_type_filter');
 
@@ -121,8 +123,8 @@ function cren_get_unsubscribe_link($comment) {
     $key = cren_secret_key($comment->comment_ID);
 
     $params = [
-        'comment' => $comment->comment_ID
-      , 'key'     => $key
+        'comment' => $comment->comment_ID,
+        'key'     => $key
     ];
 
     $uri = site_url() . '/cren/unsubscribe?' . http_build_query($params);
@@ -199,8 +201,15 @@ function cren_comment_status_update($commentId, $commentStatus) {
  * @return array
  */
 function cren_comment_fields($fields) {
+    $label = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'cren-plugin'));
+    $checked = cren_get_default_checked() ? 'checked' : '';
+
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
-      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment' , 'cren-plugin') . '</label></p>';
+      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+
+    if (cren_display_gdpr_notice()) {
+        $fields['cren_gdpr'] = cren_render_gdpr_notice();
+    }
 
     return $fields;
 }
@@ -218,11 +227,63 @@ function cren_comment_fields_logged_in($submitField) {
     $checkbox = '';
 
     if (is_user_logged_in()) {
+        $label   = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'cren-plugin'));
+        $checked = cren_get_default_checked() ? 'checked' : '';
+
         $checkbox = '<p class="comment-form-comment-subscribe">'.
-            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>' . __('Subscribe to comment', 'cren-plugin') . '</label></p>';
+            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"  ' . $checked . '>' . $label . '</label></p>';
+
+        if (cren_display_gdpr_notice()) {
+            $checkbox .= cren_render_gdpr_notice();
+        }
     }
 
     return $checkbox . $submitField;
+}
+
+/**
+ * Returns whether the checkbox should be checked by default or not.
+ *
+ * @return bool
+ */
+function cren_get_default_checked() {
+    return !!get_option('cren_get_default_checked');
+}
+
+/**
+ * Returns whether the GDPR checkbox should be shown or not.
+ *
+ * @return bool
+ */
+function cren_display_gdpr_notice() {
+    return !!get_option('cren_display_gdpr_notice');
+}
+
+/**
+ * Gets the privacy policy URL.
+ *
+ * @return string
+ */
+function cren_get_privacy_policy_url() {
+    return get_option('cren_privacy_policy_url');
+}
+
+/**
+ * Renders the GDPR checkbox.
+ *
+ * @return string
+ */
+function cren_render_gdpr_notice() {
+    $label = apply_filters(
+        'cren_comment_checkbox_label',
+        sprintf(__('I consent to %s collecting and storing the data I submit in this form' , 'cren-plugin'), get_option('blogname'))
+    );
+
+    $privacyPolicyUrl = cren_get_privacy_policy_url();
+    $privacyPolicy    = "<a target='_blank' href='{$privacyPolicyUrl}'>(" . __('Privacy Policy', 'cren-plugin') . ")</a>";
+
+    return '<p class="comment-form-comment-subscribe">'.
+      '<label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';
 }
 
 /**
@@ -244,4 +305,21 @@ function cren_persist_subscription_opt_in($commentId) {
  */
 function cren_persist_subscription_opt_out($commentId) {
     return update_comment_meta($commentId, 'cren_subscribe_to_comment', 'off');
+}
+
+/**
+ * Verifies if the comment contains all the required meta data (e.g. GDPR checkbox
+ * if applicable).
+ *
+ * @param  array $comment
+ * @return array
+ */
+function cren_verify_comment_meta_data($comment) {
+    if (cren_display_gdpr_notice()) {
+        if (!isset($_POST['cren_gdpr'])) {
+            wp_die(__('Error: you must agree with the terms to send a comment. Hit the back button on your web browser and resubmit your comment if you agree with the terms.'));
+        }
+    }
+
+    return $comment;
 }

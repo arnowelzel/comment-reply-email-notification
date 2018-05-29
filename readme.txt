@@ -35,7 +35,27 @@ To customize the email template, copy the "templates" folder to your theme folde
 
 Templates folder on GitHub: https://github.com/guhemama/worpdress-comment-reply-email-notification/tree/master/templates
 
+== Changing the subscription checkbox label ==
+
+The checkbox label can be changed with the `cren_comment_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
+
+== Changing the GDPR checkbox label ==
+
+The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
+
+== Buy me a coffee/beer ==
+
+Do you like this plugin? Support it by buying me some human-fuel - coffee on weekdays, and beer on weekends. ;)
+
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
+
 == Changelog ==
+= 1.6.0 =
+* Added Turkish translation
+* Added filters to the checkbox label
+* Added GDPR box
+* Added admin settings page
+* Added HTML entities decode to email title
 = 1.5.0 =
 * Added Italian translation (thanks Giacomo Bellisi!)
 * Added Hebrew translation (thanks Lea Cohen!)

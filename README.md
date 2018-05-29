@@ -23,7 +23,24 @@ This plugin uses the `wp_insert_comment` hook, therefore, everytime a comment is
 
 To customize the email template, copy the `templates` folder to your theme folder. The plugin will look for templates on the `/wp-content/themes/[THEME]/templates/cren/` folder; if a custom template is not found, then it will fallback to the default template.
 
+## Changing the subscription checkbox label
+
+The checkbox label can be changed with the `cren_comment_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
+
+## Changing the GDPR checkbox label
+
+The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
+
+## Buy me a coffee/beer
+
+Do you like this plugin? Support it by buying me some human-fuel - coffee on weekdays, and beer on weekends. ;)
+
+[Donate on PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58)
+
+
 ## Changelog
+* 1.6.0: added Turkish translation; added filters to the checkbox label; added GDPR box; added admin settings page; decode HTML entities on email title
+* 1.5.0: added Italian translation (thanks Giacomo Bellisi!); added Hebrew translation (thanks Lea Cohen!)
 * 1.4.4: fixed undefined variable; updated French translation
 * 1.4.3: updated Spanish translation, added German translation  (thanks to Nathanael Dalliard!)
 * 1.4.2: added French translation

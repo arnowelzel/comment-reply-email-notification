@@ -8,7 +8,7 @@
  * Developer URI: https://guh.me
  * License:       BSD-3
  *
- * Copyright (c) 2016-2017, Gustavo H. Mascarenhas Machado
+ * Copyright (c) 2016-2018, Gustavo H. Mascarenhas Machado
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,8 +34,9 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
 load_plugin_textdomain('cren-plugin', false, basename(dirname(__FILE__)) . '/i18n/');
+
+require_once 'cren_admin.php';
 
 add_action('wp_insert_comment',    'cren_comment_notification',  99, 2);
 add_action('wp_set_comment_status','cren_comment_status_update', 99, 2);
@@ -242,12 +243,21 @@ function cren_comment_fields_logged_in($submitField) {
 }
 
 /**
+ * Get the plugin options.
+ *
+ * @return array
+ */
+function cren_get_options() {
+    return get_option('cren_settings');
+}
+
+/**
  * Returns whether the checkbox should be checked by default or not.
  *
  * @return bool
  */
 function cren_get_default_checked() {
-    return !!get_option('cren_get_default_checked');
+    return !!cren_get_options()['cren_subscription_check_by_default'];
 }
 
 /**
@@ -256,7 +266,7 @@ function cren_get_default_checked() {
  * @return bool
  */
 function cren_display_gdpr_notice() {
-    return !!get_option('cren_display_gdpr_notice');
+    return !!cren_get_options()['cren_display_gdpr_notice'];
 }
 
 /**
@@ -265,7 +275,7 @@ function cren_display_gdpr_notice() {
  * @return string
  */
 function cren_get_privacy_policy_url() {
-    return get_option('cren_privacy_policy_url');
+    return cren_get_options()['cren_privacy_policy_url'];
 }
 
 /**
@@ -315,7 +325,7 @@ function cren_persist_subscription_opt_out($commentId) {
  * @return array
  */
 function cren_verify_comment_meta_data($comment) {
-    if (cren_display_gdpr_notice()) {
+    if (cren_display_gdpr_notice() && !is_admin()) {
         if (!isset($_POST['cren_gdpr'])) {
             wp_die(__('Error: you must agree with the terms to send a comment. Hit the back button on your web browser and resubmit your comment if you agree with the terms.'));
         }

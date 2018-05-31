@@ -3,7 +3,7 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.6.0
+ * Version:       1.6.1
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
@@ -243,12 +243,20 @@ function cren_comment_fields_logged_in($submitField) {
 }
 
 /**
- * Get the plugin options.
+ * Get a plugin option.
  *
- * @return array
+ * @param  $option
+ * @param  $default
+ * @return mixed
  */
-function cren_get_options() {
-    return get_option('cren_settings');
+function cren_get_option($option, $default) {
+    $options = get_option('cren_settings');
+
+    if ($options && isset($options[$option])) {
+        return $options[$option];
+    }
+
+    return $default;
 }
 
 /**
@@ -257,7 +265,7 @@ function cren_get_options() {
  * @return bool
  */
 function cren_get_default_checked() {
-    return !!cren_get_options()['cren_subscription_check_by_default'];
+    return cren_get_option('cren_subscription_check_by_default', true);
 }
 
 /**
@@ -266,7 +274,7 @@ function cren_get_default_checked() {
  * @return bool
  */
 function cren_display_gdpr_notice() {
-    return !!cren_get_options()['cren_display_gdpr_notice'];
+    return cren_get_option('cren_display_gdpr_notice', false);
 }
 
 /**
@@ -275,7 +283,7 @@ function cren_display_gdpr_notice() {
  * @return string
  */
 function cren_get_privacy_policy_url() {
-    return cren_get_options()['cren_privacy_policy_url'];
+    return cren_get_option('cren_privacy_policy_url', '');
 }
 
 /**

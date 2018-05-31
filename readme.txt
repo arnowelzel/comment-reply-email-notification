@@ -4,7 +4,7 @@ Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 4.9.5
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -50,6 +50,8 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
 
 == Changelog ==
+= 1.6.1 =
+* Fixed default settings not being set
 = 1.6.0 =
 * Added Turkish translation (thanks Bünyamin Yildirim!)
 * Added filters to the checkbox label

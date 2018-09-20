@@ -39,6 +39,7 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 
 
 ## Changelog
+* 1.7.1: fixed blog title encoding
 * 1.7.0: fixed bug where subscription checkbox was always checked; added CN translation
 * 1.6.1: fixed default settings not being set
 * 1.6.0: added Turkish translation (thanks Bünyamin Yildirim!); added filters to the checkbox label; added GDPR box; added admin settings page; decode HTML entities on email title

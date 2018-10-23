@@ -4,7 +4,7 @@ Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 4.9.8
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -50,9 +50,12 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
 
 == Changelog ==
+= 1.8.0 =
+* Added Korean translation
+* Fixed cren_gdpr_checkbox_label filter bug
 = 1.7.1 =
 * Fixed blog title encoding
-= 1.7.0
+= 1.7.0 =
 * Fixed bug where subscription checkbox was always checked
 * Added CN translation (thanks hsu1943)
 = 1.6.1 =

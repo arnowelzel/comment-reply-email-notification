@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Comment Reply Email Notification\n"
+"POT-Creation-Date: 2018-10-23 10:50-0300\n"
+"PO-Revision-Date: 2018-10-23 10:50-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: cren_admin.php\n"
+"X-Poedit-SearchPath-1: cren_plugin.php\n"
+
+#: cren_admin.php:71
+msgid "Check the subscription checkbox by default"
+msgstr "Check the subscription checkbox by default"
+
+#: cren_admin.php:79
+msgid "Display the GDPR checkbox"
+msgstr "Display the GDPR checkbox"
+
+#: cren_admin.php:87
+msgid "Privacy Policy URL"
+msgstr "Privacy Policy URL"
+
+#: cren_plugin.php:82
+msgid "New reply to your comment"
+msgstr "New reply to your comment"
+
+#: cren_plugin.php:176
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Your subscription for this comment has been cancelled."
+
+#: cren_plugin.php:205 cren_plugin.php:231
+msgid "Subscribe to comment"
+msgstr "Subscribe to comment"
+
+#: cren_plugin.php:297
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form"
+msgstr "I consent to %s collecting and storing the data I submit in this form"
+
+#: cren_plugin.php:301
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: cren_plugin.php:338
+msgid ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."
+msgstr ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."

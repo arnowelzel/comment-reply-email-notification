@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-10-23 10:50-0300\n"
+"PO-Revision-Date: 2019-01-20 14:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cren_admin.php:71
+msgid "Check the subscription checkbox by default"
+msgstr "Επιλέξτε το πλαίσιο ελέγχου εγγραφής από προεπιλογή"
+
+#: cren_admin.php:79
+msgid "Display the GDPR checkbox"
+msgstr "Εμφάνιση του πλαισίου ελέγχου GDPR"
+
+#: cren_admin.php:87
+msgid "Privacy Policy URL"
+msgstr "URL Πολιτικής προστασίας προσωπικών δεδομένων"
+
+#: cren_plugin.php:82
+msgid "New reply to your comment"
+msgstr "Υπάρχει μία νέα απάντηση στο σχόλιό σας"
+
+#: cren_plugin.php:176
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Η παρακολούθηση νήματος για αυτό το σχόλιο έχει ακυρωθεί."
+
+#: cren_plugin.php:205 cren_plugin.php:231
+msgid "Subscribe to comment"
+msgstr "Παρακολούθηση νήματος στην ηλεκτρονική μου διεύθυνση"
+
+#: cren_plugin.php:297
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form"
+msgstr ""
+"Συναινώ στο %s για τη συλλογή και αποθήκευση των δεδομένων που υποβάλλω σε "
+"αυτή τη φόρμα"
+
+#: cren_plugin.php:301
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
+
+#: cren_plugin.php:338
+msgid ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."
+msgstr ""
+"ΣΦΑΛΜΑ: πρέπει να συμφωνήσετε με τους όρους για να στείλετε ένα σχόλιο. "
+"Επαναφορτώστε τη σελίδα και υποβάλετε εκ νέου το σχόλιό σας εάν συμφωνείτε "
+"με τους όρους."

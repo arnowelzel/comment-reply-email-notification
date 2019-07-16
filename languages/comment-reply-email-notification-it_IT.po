@@ -1,0 +1,62 @@
+# Copyright (C) 2016 Comment Reply Email Notification
+# This file is distributed under the same license as the Comment Reply Email Notification package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Reply Email Notification 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
+"email-notification\n"
+"POT-Creation-Date: 2016-01-25 00:22:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-04-11 15:00-0400\n"
+"Last-Translator: Gustavo Henrique Mascarenhas Machado <guhemama@gmail.com>\n"
+"Language-Team: Giacomo Bellisi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: it_IT\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cren_plugin.php:55
+msgid "Hi %s"
+msgstr "Ciao %s"
+
+#: cren_plugin.php:56
+msgid "%s has replied to your comment on"
+msgstr "%s ha risposto ad un tuo commento su"
+
+#: cren_plugin.php:59
+msgid "Click here to reply"
+msgstr "Clicca qui per rispondere"
+
+#: cren_plugin.php:62
+msgid "New reply to your comment"
+msgstr "Nuova risposta a un tuo commento"
+
+#: cren_plugin.php:81
+msgid "Click here to stop receiving these messages"
+msgstr "Clicca qui per non ricevere più questi messaggi"
+
+#: cren_plugin.php:160
+msgid "Your subscription for this comment has been cancelled."
+msgstr "La tua iscrizione a questo commento è stata cancellata."
+
+#: cren_plugin.php:189
+msgid "Subscribe to comment"
+msgstr "Iscrivimi ai commenti! Riceverai una mail se qualcuno ti risponde"
+
+#. Plugin Name of the plugin/theme
+msgid "Comment Reply Email Notification"
+msgstr "Comment Reply Email Notification"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Sends an email notification to the comment author when someone replies to "
+"his comment."
+msgstr ""
+"Invia un'email di notifica per l'autore del commento quando qualcuno "
+"risponde al suo commento."

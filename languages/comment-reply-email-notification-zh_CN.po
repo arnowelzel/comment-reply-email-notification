@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Reply Email Notification\n"
+"POT-Creation-Date: 2018-08-20 11:21+0800\n"
+"PO-Revision-Date: 2018-08-20 11:32+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: cren_admin.php:71
+msgid "Check the subscription checkbox by default"
+msgstr "默认选中订阅回复"
+
+#: cren_admin.php:79
+msgid "Display the GDPR checkbox"
+msgstr "显示GDPR选框"
+
+#: cren_admin.php:87
+msgid "Privacy Policy URL"
+msgstr "隐私政策链接"
+
+#: cren_plugin.php:82
+msgid "New reply to your comment"
+msgstr "您的评论有了新回复"
+
+#: cren_plugin.php:176
+msgid "Your subscription for this comment has been cancelled."
+msgstr "您的评论邮件提醒已退订"
+
+#: cren_plugin.php:205 cren_plugin.php:231
+msgid "Subscribe to comment"
+msgstr "邮件订阅评论"
+
+#: cren_plugin.php:297
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form"
+msgstr "我同意%s收集和存储我在表单中提交的数据"
+
+#: cren_plugin.php:301
+msgid "Privacy Policy"
+msgstr "隐私政策"
+
+#: cren_plugin.php:338
+msgid ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."
+msgstr ""
+"错误：你必须同意发送评论条款，如果你同意这些条款，点击浏览器后退按钮并重新提"
+"交评论。"
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr "您好！%s"
+
+#: templates/cren/notification.php:3
+#, php-format
+msgid "%s has replied to your comment on"
+msgstr "%s回复了你的评论"
+
+#: templates/cren/notification.php:9
+msgid "Click here to reply"
+msgstr "我要回复"
+
+#: templates/cren/notification.php:11
+msgid "Click here to stop receiving these messages"
+msgstr "退订评论邮件提醒"

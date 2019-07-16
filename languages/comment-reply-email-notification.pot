@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
-"POT-Creation-Date: 2019-07-16 07:27+0000\n"
+"POT-Creation-Date: 2019-07-16 07:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -38,12 +38,12 @@ msgid "Your subscription for this comment has been cancelled."
 msgstr ""
 
 #: cren_plugin.php:206 cren_plugin.php:232
-msgid "Subscribe to comment"
+msgid "Notify me via e-mail if anyone answers my comment."
 msgstr ""
 
 #: cren_plugin.php:298
 #, php-format
-msgid "I consent to %s collecting and storing the data I submit in this form"
+msgid "I consent to %s collecting and storing the data I submit in this form."
 msgstr ""
 
 #: cren_plugin.php:302

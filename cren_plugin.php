@@ -203,7 +203,7 @@ function cren_comment_status_update($commentId, $commentStatus) {
  * @return array
  */
 function cren_comment_fields($fields) {
-    $label = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'comment-reply-email-notification'));
+    $label = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
     $checked = cren_get_default_checked() ? 'checked' : '';
 
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
@@ -229,7 +229,7 @@ function cren_comment_fields_logged_in($submitField) {
     $checkbox = '';
 
     if (is_user_logged_in()) {
-        $label   = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'comment-reply-email-notification'));
+        $label   = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
         $checked = cren_get_default_checked() ? 'checked' : '';
 
         $checkbox = '<p class="comment-form-comment-subscribe">'.
@@ -295,7 +295,7 @@ function cren_get_privacy_policy_url() {
 function cren_render_gdpr_notice() {
     $label = apply_filters(
         'cren_gdpr_checkbox_label',
-        sprintf(__('I consent to %s collecting and storing the data I submit in this form' , 'comment-reply-email-notification'), get_option('blogname'))
+        sprintf(__('I consent to %s collecting and storing the data I submit in this form.' , 'comment-reply-email-notification'), get_option('blogname'))
     );
 
     $privacyPolicyUrl = cren_get_privacy_policy_url();

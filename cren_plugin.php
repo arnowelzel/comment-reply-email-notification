@@ -7,6 +7,7 @@
  * Developer:     Gustavo H. Mascarenhas Machado
  * Developer URI: https://guh.me
  * License:       BSD-3
+ * Text Domain:   comment-reply-email-notification
  *
  * Copyright (c) 2016-2018, Gustavo H. Mascarenhas Machado
  * All rights reserved.
@@ -34,7 +35,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-load_plugin_textdomain('cren-plugin', false, basename(dirname(__FILE__)) . '/i18n/');
+load_plugin_textdomain('comment-reply-email-notification', false, basename(dirname(__FILE__)) . '/languages/');
 
 require_once 'cren_admin.php';
 
@@ -79,7 +80,7 @@ function cren_comment_notification($commentId, $comment) {
         require cren_notification_template_path();
         $body = ob_get_clean();
 
-        $title = html_entity_decode(get_option('blogname'), ENT_QUOTES) . ' - ' . __('New reply to your comment', 'cren-plugin', $body);
+        $title = html_entity_decode(get_option('blogname'), ENT_QUOTES) . ' - ' . __('New reply to your comment', 'comment-reply-email-notification', $body);
 
         add_filter('wp_mail_content_type', 'cren_wp_mail_content_type_filter');
 
@@ -173,7 +174,7 @@ function cren_unsubscribe_route() {
         cren_persist_subscription_opt_out($commentId);
 
         echo '<!doctype html><html><head><meta charset="utf-8"><title>' . get_bloginfo('name') . '</title></head><body>';
-        echo '<p>' . __('Your subscription for this comment has been cancelled.' , 'cren-plugin') . '</p>';
+        echo '<p>' . __('Your subscription for this comment has been cancelled.' , 'comment-reply-email-notification') . '</p>';
         echo '<script type="text/javascript">setTimeout(function() { window.location.href="' . $uri . '"; }, 3000);</script>';
         echo '</body></html>';
         exit;
@@ -202,7 +203,7 @@ function cren_comment_status_update($commentId, $commentStatus) {
  * @return array
  */
 function cren_comment_fields($fields) {
-    $label = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'cren-plugin'));
+    $label = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
     $checked = cren_get_default_checked() ? 'checked' : '';
 
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
@@ -228,7 +229,7 @@ function cren_comment_fields_logged_in($submitField) {
     $checkbox = '';
 
     if (is_user_logged_in()) {
-        $label   = apply_filters('cren_comment_checkbox_label', __('Subscribe to comment' , 'cren-plugin'));
+        $label   = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
         $checked = cren_get_default_checked() ? 'checked' : '';
 
         $checkbox = '<p class="comment-form-comment-subscribe">'.
@@ -294,11 +295,11 @@ function cren_get_privacy_policy_url() {
 function cren_render_gdpr_notice() {
     $label = apply_filters(
         'cren_gdpr_checkbox_label',
-        sprintf(__('I consent to %s collecting and storing the data I submit in this form' , 'cren-plugin'), get_option('blogname'))
+        sprintf(__('I consent to %s collecting and storing the data I submit in this form.' , 'comment-reply-email-notification'), get_option('blogname'))
     );
 
     $privacyPolicyUrl = cren_get_privacy_policy_url();
-    $privacyPolicy    = "<a target='_blank' href='{$privacyPolicyUrl}'>(" . __('Privacy Policy', 'cren-plugin') . ")</a>";
+    $privacyPolicy    = "<a target='_blank' href='{$privacyPolicyUrl}'>(" . __('Privacy Policy', 'comment-reply-email-notification') . ")</a>";
 
     return '<p class="comment-form-comment-subscribe">'.
       '<label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';

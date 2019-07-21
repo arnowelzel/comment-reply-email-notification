@@ -1,0 +1,62 @@
+# Copyright (C) 2016 Comment Reply Email Notification
+# This file is distributed under the same license as the Comment Reply Email Notification package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Reply Email Notification 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
+"email-notification\n"
+"POT-Creation-Date: 2016-01-25 00:22:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-05-27 17:46+0300\n"
+"Last-Translator: Dr. Bünyamin YILDIRIM <bunyaminmd@gmail.com>\n"
+"Language-Team: Türkçe\n"
+"X-Generator: Poedit 2.0.7\n"
+"Language: tr_TR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cren_plugin.php:55
+msgid "Hi %s"
+msgstr "Merhaba %s"
+
+#: cren_plugin.php:56
+msgid "%s has replied to your comment on"
+msgstr "%s yorumunuza cevap verdi"
+
+#: cren_plugin.php:59
+msgid "Click here to reply"
+msgstr "Cevap vermek için tıklayınız"
+
+#: cren_plugin.php:62
+msgid "New reply to your comment"
+msgstr "Yorumunuza cevap geldi"
+
+#: cren_plugin.php:81
+msgid "Click here to stop receiving these messages"
+msgstr "Bu mesajları almayı durdurmak için buraya tıklayınız"
+
+#: cren_plugin.php:160
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Bu yorum için aboneliğiniz iptal edilmiştir."
+
+#: cren_plugin.php:189
+msgid "Subscribe to comment"
+msgstr "Yoruma abone ol."
+
+#. Plugin Name of the plugin/theme
+msgid "Comment Reply Email Notification"
+msgstr "Comment Reply Email Notification"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
+msgstr ""
+"https://github.com/guhemama/worpdress-comment-reply-email-notification"
+
+#. Description of the plugin/theme
+msgid ""
+"Sends an email notification to the comment author when someone replies to "
+"his comment."
+msgstr ""
+"Bir yoruma cevap yazıldığında yorum sahibine e-posta uyarısı gönderir "

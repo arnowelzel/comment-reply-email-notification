@@ -3,8 +3,8 @@ Contributors: Gustavo H. Mascarenhas Machado
 Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 5.0.3
-Stable tag: 1.9.0
+Tested up to: 5.2.2
+Stable tag: 1.10.0
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -50,6 +50,8 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
 
 == Changelog ==
+= 1.10.0 =
+* Changed localization domain (thanks to Arno Welzel!)
 = 1.9.0 =
 * Added Greek translation (thanks to Chrysovalantis Chatzigeorgiou!)
 * Added Czech translation (thanks to Zbyněk Gilar!)

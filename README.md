@@ -39,6 +39,7 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 
 
 ## Changelog
+* 1.10.1: fixed localization domain (thanks to Arno Welzel!)
 * 1.10.0: changed localization domain (thanks to Arno Welzel!)
 * 1.9.0: added Greek translation (thanks to Chrysovalantis Chatzigeorgiou!), added Czech translation (thanks to Zbyněk Gilar!)
 * 1.8.0: added Korean translation; fixed cren_gdpr_checkbox_label filter bug

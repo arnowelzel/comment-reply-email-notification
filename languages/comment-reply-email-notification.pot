@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
-"POT-Creation-Date: 2019-07-16 07:39+0000\n"
+"POT-Creation-Date: 2019-07-22 07:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -48,6 +48,24 @@ msgstr ""
 
 #: cren_plugin.php:302
 msgid "Privacy Policy"
+msgstr ""
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr ""
+
+#: templates/cren/notification.php:3
+#, php-format
+msgid "%s has replied to your comment on"
+msgstr ""
+
+#: templates/cren/notification.php:9
+msgid "Click here to reply"
+msgstr ""
+
+#: templates/cren/notification.php:11
+msgid "Click here to stop receiving these messages"
 msgstr ""
 
 #. Name of the plugin

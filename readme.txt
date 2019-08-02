@@ -1,5 +1,5 @@
 === Comment Reply Email Notification ===
-Contributors: Gustavo H. Mascarenhas Machado
+Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
 Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0

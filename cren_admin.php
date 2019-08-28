@@ -68,7 +68,7 @@ function cren_settings_init() {
 
     add_settings_field(
         'cren_subscription_check_by_default',
-        __('Check the subscription checkbox by default', 'cren-plugin'),
+        __('Check the subscription checkbox by default', 'comment-reply-email-notification'),
         'cren_subscription_check_by_default_render',
         'cren_admin',
         'cren_admin_section'
@@ -76,7 +76,7 @@ function cren_settings_init() {
 
     add_settings_field(
         'cren_display_gdpr_notice',
-        __('Display the GDPR checkbox', 'cren-plugin'),
+        __('Display the GDPR checkbox', 'comment-reply-email-notification'),
         'cren_display_gdpr_notice_render',
         'cren_admin',
         'cren_admin_section'
@@ -84,7 +84,7 @@ function cren_settings_init() {
 
     add_settings_field(
         'cren_privacy_policy_url',
-        __('Privacy Policy URL', 'cren-plugin'),
+        __('Privacy Policy URL', 'comment-reply-email-notification'),
         'cren_privacy_policy_url_render',
         'cren_admin',
         'cren_admin_section'

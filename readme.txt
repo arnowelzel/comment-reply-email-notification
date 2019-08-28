@@ -1,10 +1,10 @@
 === Comment Reply Email Notification ===
-Contributors: Gustavo H. Mascarenhas Machado
+Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
 Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 4.9.5
-Stable tag: 1.6.1
+Tested up to: 5.2.2
+Stable tag: 1.10.1
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -13,7 +13,7 @@ License URI: http://opensource.org/licenses/BSD-3-Clause
 This plugin notifies a comment author via email when someone replies to his comment.
 
 == Requirements ==
-* PHP 5.6+
+* PHP 7.0+
 * Wordpress 4.4+
 
 == Installation ==
@@ -50,6 +50,21 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
 
 == Changelog ==
+= 1.10.1 =
+* Fixed localization domain (thanks to Arno Welzel!)
+= 1.10.0 =
+* Changed localization domain (thanks to Arno Welzel!)
+= 1.9.0 =
+* Added Greek translation (thanks to Chrysovalantis Chatzigeorgiou!)
+* Added Czech translation (thanks to Zbyněk Gilar!)
+= 1.8.0 =
+* Added Korean translation
+* Fixed cren_gdpr_checkbox_label filter bug
+= 1.7.1 =
+* Fixed blog title encoding
+= 1.7.0 =
+* Fixed bug where subscription checkbox was always checked
+* Added CN translation (thanks hsu1943)
 = 1.6.1 =
 * Fixed default settings not being set
 = 1.6.0 =

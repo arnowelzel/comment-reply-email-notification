@@ -3,7 +3,7 @@
 This plugin notifies a comment author via email when someone replies to his comment.
 
 ## Requirements
-* PHP 5.6+
+* PHP 7.0+
 * Wordpress 4.4+
 
 ## Installation
@@ -39,6 +39,12 @@ Do you like this plugin? Support it by buying me some human-fuel - coffee on wee
 
 
 ## Changelog
+* 1.10.1: fixed localization domain (thanks to Arno Welzel!)
+* 1.10.0: changed localization domain (thanks to Arno Welzel!)
+* 1.9.0: added Greek translation (thanks to Chrysovalantis Chatzigeorgiou!), added Czech translation (thanks to Zbyněk Gilar!)
+* 1.8.0: added Korean translation; fixed cren_gdpr_checkbox_label filter bug
+* 1.7.1: fixed blog title encoding
+* 1.7.0: fixed bug where subscription checkbox was always checked; added CN translation
 * 1.6.1: fixed default settings not being set
 * 1.6.0: added Turkish translation (thanks Bünyamin Yildirim!); added filters to the checkbox label; added GDPR box; added admin settings page; decode HTML entities on email title
 * 1.5.0: added Italian translation (thanks Giacomo Bellisi!); added Hebrew translation (thanks Lea Cohen!)

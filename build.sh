@@ -8,6 +8,8 @@ TMP_DIR=$BASE_DIR/tmp
 
 mkdir $TMP_DIR
 svn co http://plugins.svn.wordpress.org/comment-reply-email-notification/ $TMP_DIR
+rm -rf $TMP_DIR/trunk
+mkdir -p $TMP_DIR/trunk
 cd $TMP_DIR/trunk
 git clone --recursive https://github.com/guhemama/worpdress-comment-reply-email-notification.git tmp
 cp -r tmp/* .

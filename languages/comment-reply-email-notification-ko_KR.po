@@ -1,0 +1,61 @@
+# Copyright (C) 2016 Comment Reply Email Notification
+# This file is distributed under the same license as the Comment Reply Email Notification package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Comment Reply Email Notification 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
+"email-notification\n"
+"POT-Creation-Date: 2016-01-25 00:22:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-09-04 17:30+0300\n"
+"Language-Team: Gustavo Henrique Mascarenhas Machado <guhemama@gmail.com>\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ko_KR\n"
+
+#: cren_plugin.php:55
+msgid "Hi %s"
+msgstr "안녕하세요 %s 님"
+
+#: cren_plugin.php:56
+msgid "%s has replied to your comment on"
+msgstr "%s 님이 당신의 댓글에 답글을 달았습니다"
+
+#: cren_plugin.php:59
+msgid "Click here to reply"
+msgstr "여기를 눌러서 답글을 남겨보세요"
+
+#: cren_plugin.php:62
+msgid "New reply to your comment"
+msgstr "당신의 댓글에 새로운 답글이 달렸습니다"
+
+#: cren_plugin.php:81
+msgid "Click here to stop receiving these messages"
+msgstr "이런 이메일을 더 받으시기 싫다면 여기를 누르세요"
+
+#: cren_plugin.php:160
+msgid "Your subscription for this comment has been cancelled."
+msgstr "이 댓글에 당신의 구독이 취소되었습니다."
+
+#: cren_plugin.php:189
+msgid "Subscribe to comment"
+msgstr "댓글 구독하기"
+
+#. Plugin Name of the plugin/theme
+msgid "Comment Reply Email Notification"
+msgstr "댓글 답글 이메일 알림"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
+msgstr ""
+"https://github.com/guhemama/worpdress-comment-reply-email-notification"
+
+#. Description of the plugin/theme
+msgid ""
+"Sends an email notification to the comment author when someone replies to "
+"his comment."
+msgstr "댓글에 답글이 등록됐을 때 작성자에게 이메일 알림을 보냅니다."

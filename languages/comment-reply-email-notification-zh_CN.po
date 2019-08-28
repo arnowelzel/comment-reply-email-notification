@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Comment Reply Email Notification\n"
-"POT-Creation-Date: 2018-08-20 11:21+0800\n"
-"PO-Revision-Date: 2018-08-20 11:32+0800\n"
+"POT-Creation-Date: 2019-08-28 10:20+0800\n"
+"PO-Revision-Date: 2019-08-28 10:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: zh_Hans\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,36 +28,36 @@ msgstr "显示GDPR选框"
 
 #: cren_admin.php:87
 msgid "Privacy Policy URL"
-msgstr "隐私政策链接"
+msgstr "隐私政策URL"
 
-#: cren_plugin.php:82
+#: cren_plugin.php:83
 msgid "New reply to your comment"
 msgstr "您的评论有了新回复"
 
-#: cren_plugin.php:176
+#: cren_plugin.php:177
 msgid "Your subscription for this comment has been cancelled."
-msgstr "您的评论邮件提醒已退订"
+msgstr "已成功退订评论邮件提醒"
 
-#: cren_plugin.php:205 cren_plugin.php:231
-msgid "Subscribe to comment"
-msgstr "邮件订阅评论"
+#: cren_plugin.php:206 cren_plugin.php:232
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr "当有人回复我的评论时邮件提醒我"
 
-#: cren_plugin.php:297
+#: cren_plugin.php:298
 #, php-format
-msgid "I consent to %s collecting and storing the data I submit in this form"
-msgstr "我同意%s收集和存储我在表单中提交的数据"
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr "我同意%s收集和存储我在表单中提交的信息"
 
-#: cren_plugin.php:301
+#: cren_plugin.php:302
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: cren_plugin.php:338
+#: cren_plugin.php:339
 msgid ""
 "Error: you must agree with the terms to send a comment. Hit the back button "
 "on your web browser and resubmit your comment if you agree with the terms."
 msgstr ""
 "错误：你必须同意发送评论条款，如果你同意这些条款，点击浏览器后退按钮并重新提"
-"交评论。"
+"交评论"
 
 #: templates/cren/notification.php:1
 #, php-format

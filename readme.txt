@@ -3,27 +3,22 @@ Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 5.4
-Stable tag: 1.10.2
+Stable tag: 1.11.0
 Donate link: https://paypal.me/ArnoWelzel
-License: BSD
-License URI: http://opensource.org/licenses/BSD-3-Clause
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
 This plugin notifies a comment author via email when someone replies to his comment.
 
-== Requirements ==
-* PHP 7.0+
-* Wordpress 4.4+
-
 == Installation ==
 
 How to install the plugin:
 
-1. Upload the ZIP file to your Wordpress installation directory
-2. Extract the ZIP file contents to the /wp-content/plugins directory.
-3. Activate the plugin.
-4. For better results, setup a plugin to send emails using SMTP.
+1. Extract the contents of the package to the `/wp-content/plugins/comment-reply-email-notification` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. For better results, setup a plugin to send emails using SMTP.
 
 == Warning ==
 
@@ -33,7 +28,7 @@ This plugin uses the "wp_insert_comment" hook, therefore, everytime a comment is
 
 To customize the email template, copy the "templates" folder to your theme folder. The plugin will look for templates on the "/wp-content/themes/[THEME]/templates/cren/" folder; if a custom template is not found, then it will fallback to the default template.
 
-Templates folder on GitHub: https://github.com/guhemama/worpdress-comment-reply-email-notification/tree/master/templates
+Templates folder on GitHub: https://github.com/arnowelzel/worpdress-comment-reply-email-notification/tree/master/templates
 
 == Changing the subscription checkbox label ==
 
@@ -44,9 +39,8 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
 == Changelog ==
-= 1.10.2 =
-* Updated readme.txt and code comments to reflect plugin ownership changes
-* Minor changes for frontend code
+= 1.11.0 =
+* Major code refactoring (class based, better PSR compliance)
 = 1.10.1 =
 * Fixed localization domain (thanks to Arno Welzel!)
 = 1.10.0 =

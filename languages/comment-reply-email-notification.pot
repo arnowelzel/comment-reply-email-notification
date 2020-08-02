@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
-"POT-Creation-Date: 2019-07-22 07:08+0000\n"
+"POT-Creation-Date: 2020-08-02 07:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,36 +17,37 @@ msgstr ""
 "X-Poedit-SearchPath-0: cren_admin.php\n"
 "X-Poedit-SearchPath-1: cren_plugin.php\n"
 
-#: cren_admin.php:71
+#: comment-reply-email-notification.php:87
 msgid "Check the subscription checkbox by default"
 msgstr ""
 
-#: cren_admin.php:79
+#: comment-reply-email-notification.php:95
 msgid "Display the GDPR checkbox"
 msgstr ""
 
-#: cren_admin.php:87
+#: comment-reply-email-notification.php:103
 msgid "Privacy Policy URL"
 msgstr ""
 
-#: cren_plugin.php:83
+#: comment-reply-email-notification.php:205
 msgid "New reply to your comment"
 msgstr ""
 
-#: cren_plugin.php:177
+#: comment-reply-email-notification.php:304
 msgid "Your subscription for this comment has been cancelled."
 msgstr ""
 
-#: cren_plugin.php:206 cren_plugin.php:232
+#: comment-reply-email-notification.php:336
+#: comment-reply-email-notification.php:363
 msgid "Notify me via e-mail if anyone answers my comment."
 msgstr ""
 
-#: cren_plugin.php:298
+#: comment-reply-email-notification.php:433
 #, php-format
 msgid "I consent to %s collecting and storing the data I submit in this form."
 msgstr ""
 
-#: cren_plugin.php:302
+#: comment-reply-email-notification.php:437
 msgid "Privacy Policy"
 msgstr ""
 
@@ -79,5 +80,13 @@ msgid ""
 msgstr ""
 
 #. URI of the plugin
-msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
 msgstr ""

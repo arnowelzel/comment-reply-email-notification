@@ -5,58 +5,95 @@ msgstr ""
 "Project-Id-Version: Comment Reply Email Notification 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
 "email-notification\n"
-"POT-Creation-Date: 2016-01-25 00:22:29+00:00\n"
+"POT-Creation-Date: 2020-08-02 07:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-11 15:00-0400\n"
-"Last-Translator: Gustavo Henrique Mascarenhas Machado <guhemama@gmail.com>\n"
-"Language-Team: Giacomo Bellisi\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"PO-Revision-Date: 2020-08-02 07:58+0000\n"
+"Last-Translator: Arno Welzel\n"
+"Language-Team: Italian\n"
+"X-Generator: Loco https://localise.biz/\n"
 "Language: it_IT\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Loco-Version: 2.4.0; wp-5.4.2"
 
-#: cren_plugin.php:55
-msgid "Hi %s"
-msgstr "Ciao %s"
+#: comment-reply-email-notification.php:87
+msgid "Check the subscription checkbox by default"
+msgstr ""
+"Seleziona la casella di controllo dell'abbonamento per impostazione "
+"predefinita"
 
-#: cren_plugin.php:56
-msgid "%s has replied to your comment on"
-msgstr "%s ha risposto ad un tuo commento su"
+#: comment-reply-email-notification.php:95
+msgid "Display the GDPR checkbox"
+msgstr "Visualizza la casella di controllo GDPR"
 
-#: cren_plugin.php:59
-msgid "Click here to reply"
-msgstr "Clicca qui per rispondere"
+#: comment-reply-email-notification.php:103
+msgid "Privacy Policy URL"
+msgstr "URL della politica sulla privacy"
 
-#: cren_plugin.php:62
+#: comment-reply-email-notification.php:205
 msgid "New reply to your comment"
 msgstr "Nuova risposta a un tuo commento"
 
-#: cren_plugin.php:81
-msgid "Click here to stop receiving these messages"
-msgstr "Clicca qui per non ricevere più questi messaggi"
-
-#: cren_plugin.php:160
+#: comment-reply-email-notification.php:304
 msgid "Your subscription for this comment has been cancelled."
 msgstr "La tua iscrizione a questo commento è stata cancellata."
 
-#: cren_plugin.php:189
-msgid "Subscribe to comment"
-msgstr "Iscrivimi ai commenti! Riceverai una mail se qualcuno ti risponde"
+#: comment-reply-email-notification.php:336
+#: comment-reply-email-notification.php:363
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr "Avvisami via e-mail se qualcuno risponde al mio commento."
 
-#. Plugin Name of the plugin/theme
+#: comment-reply-email-notification.php:433
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr ""
+"Acconsento a% s di raccogliere e archiviare i dati che invio in questo "
+"modulo."
+
+#: comment-reply-email-notification.php:437
+msgid "Privacy Policy"
+msgstr "Politica sulla riservatezza"
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr "Ciao %s"
+
+#: templates/cren/notification.php:3
+#, php-format
+msgid "%s has replied to your comment on"
+msgstr "%s ha risposto ad un tuo commento su"
+
+#: templates/cren/notification.php:9
+msgid "Click here to reply"
+msgstr "Clicca qui per rispondere"
+
+#: templates/cren/notification.php:11
+msgid "Click here to stop receiving these messages"
+msgstr "Clicca qui per non ricevere più questi messaggi"
+
+#. Name of the plugin
 msgid "Comment Reply Email Notification"
 msgstr "Comment Reply Email Notification"
 
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
-msgstr ""
-
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid ""
 "Sends an email notification to the comment author when someone replies to "
 "his comment."
 msgstr ""
 "Invia un'email di notifica per l'autore del commento quando qualcuno "
 "risponde al suo commento."
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
+
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr "Arno Welzel"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr "http://arnowelzel.de"

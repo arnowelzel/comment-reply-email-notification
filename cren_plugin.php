@@ -3,12 +3,14 @@
  * Plugin Name:   Comment Reply Email Notification
  * Plugin URI:    https://github.com/guhemama/worpdress-comment-reply-email-notification
  * Description:   Sends an email notification to the comment author when someone replies to his comment.
- * Version:       1.10.1
- * Developer:     Gustavo H. Mascarenhas Machado
- * Developer URI: https://guh.me
+ * Version:       1.10.3
+ * Developer:     Arno Welzel, Gustavo H. Mascarenhas Machado
+ * Developer URI: https://arnowelzel.de
  * License:       BSD-3
  * Text Domain:   comment-reply-email-notification
  *
+ * Copyright (c) 2019-2020, Arno Welzel
+ * All rights reserved.
  * Copyright (c) 2016-2018, Gustavo H. Mascarenhas Machado
  * All rights reserved.
  *
@@ -207,7 +209,7 @@ function cren_comment_fields($fields) {
     $checked = cren_get_default_checked() ? 'checked' : '';
 
     $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
-      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+      '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '> ' . $label . '</label></p>';
 
     if (cren_display_gdpr_notice()) {
         $fields['cren_gdpr'] = cren_render_gdpr_notice();
@@ -232,8 +234,7 @@ function cren_comment_fields_logged_in($submitField) {
         $label   = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
         $checked = cren_get_default_checked() ? 'checked' : '';
 
-        $checkbox = '<p class="comment-form-comment-subscribe">'.
-            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"  ' . $checked . '>' . $label . '</label></p>';
+        $checkbox = '<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"  ' . $checked . '> ' . $label . '</label></p>';
 
         if (cren_display_gdpr_notice()) {
             $checkbox .= cren_render_gdpr_notice();
@@ -301,8 +302,7 @@ function cren_render_gdpr_notice() {
     $privacyPolicyUrl = cren_get_privacy_policy_url();
     $privacyPolicy    = "<a target='_blank' href='{$privacyPolicyUrl}'>(" . __('Privacy Policy', 'comment-reply-email-notification') . ")</a>";
 
-    return '<p class="comment-form-comment-subscribe">'.
-      '<label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';
+    return '<p class="comment-form-comment-subscribe"><label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required"> ' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';
 }
 
 /**

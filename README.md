@@ -31,14 +31,8 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
-## Buy me a coffee/beer
-
-Do you like this plugin? Support it by buying me some human-fuel - coffee on weekdays, and beer on weekends. ;)
-
-[Donate on PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58)
-
-
 ## Changelog
+* 1.10.2: minor changes for frontend output, updated WordPress compatibility information
 * 1.10.1: fixed localization domain (thanks to Arno Welzel!)
 * 1.10.0: changed localization domain (thanks to Arno Welzel!)
 * 1.9.0: added Greek translation (thanks to Chrysovalantis Chatzigeorgiou!), added Czech translation (thanks to Zbyněk Gilar!)

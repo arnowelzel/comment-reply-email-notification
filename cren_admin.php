@@ -1,5 +1,7 @@
 <?php
 /**
+ * Copyright (c) 2019-2020, Arno Welzel
+ * All rights reserved.
  * Copyright (c) 2016-2018, Gustavo H. Mascarenhas Machado
  * All rights reserved.
  *

@@ -1,10 +1,10 @@
 === Comment Reply Email Notification ===
 Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
-Donate link: https://guh.me/
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 5.2.2
-Stable tag: 1.10.1
+Tested up to: 5.4
+Stable tag: 1.10.2
+Donate link: https://paypal.me/ArnoWelzel
 License: BSD
 License URI: http://opensource.org/licenses/BSD-3-Clause
 
@@ -43,13 +43,10 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
-== Buy me a coffee/beer ==
-
-Do you like this plugin? Support it by buying me some human-fuel - coffee on weekdays, and beer on weekends. ;)
-
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HG8SRFWT4XY58
-
 == Changelog ==
+= 1.10.2 =
+* Updated readme.txt and code comments to reflect plugin ownership changes
+* Minor changes for frontend code
 = 1.10.1 =
 * Fixed localization domain (thanks to Arno Welzel!)
 = 1.10.0 =

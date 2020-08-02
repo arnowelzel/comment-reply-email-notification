@@ -1,5 +1,5 @@
 === Comment Reply Email Notification ===
-Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
+Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 5.5

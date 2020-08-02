@@ -2,7 +2,7 @@
 Contributors: Gustavo H. Mascarenhas Machado, Arno Welzel
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 5.4
+Tested up to: 5.5
 Stable tag: 1.11.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2

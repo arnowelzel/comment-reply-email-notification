@@ -26,7 +26,7 @@ This plugin uses the "wp_insert_comment" hook, therefore, everytime a comment is
 
 == Customizing the email template
 
-To customize the email template, copy the "templates" folder to your theme folder. The plugin will look for templates on the "/wp-content/themes/[THEME]/templates/cren/" folder; if a custom template is not found, then it will fallback to the default template.
+To customize the email template, copy the "templates" folder to your theme folder (a child theme should be used to avoid losing the custom templates when the theme is updated). The plugin will look for templates on the "/wp-content/themes/[THEME]/templates/cren/" folder; if a custom template is not found, then it will fallback to the default template.
 
 Templates folder on GitHub: https://github.com/arnowelzel/worpdress-comment-reply-email-notification/tree/master/templates
 

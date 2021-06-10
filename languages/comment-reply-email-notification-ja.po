@@ -48,7 +48,7 @@ msgstr "わたしは%sがこのフォームから送信されたデータを収�
 
 #: comment-reply-email-notification.php:437
 msgid "Privacy Policy"
-msgstr "プライバシーポリシ"
+msgstr "プライバシー・ポリシ"
 
 #: templates/cren/notification.php:1
 #, php-format

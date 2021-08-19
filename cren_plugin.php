@@ -3,7 +3,7 @@
 Plugin Name: Comment Reply Email Notification
 Plugin URI: https://wordpress.org/plugins/comment-reply-email-notification/
 Description: Sends an email notification to the comment author when someone replies to his comment.
-Version: 1.12.0
+Version: 1.13.0
 Author: Arno Welzel
 Author URI: http://arnowelzel.de
 Text Domain: comment-reply-email-notification
@@ -12,7 +12,7 @@ defined('ABSPATH') or die();
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.12.0';
+    const CREN_VERSION = '1.13.0';
 
     /**
      * Constructor

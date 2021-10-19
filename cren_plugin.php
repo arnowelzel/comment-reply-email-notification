@@ -19,7 +19,7 @@ class CommentReplyEmailNotification
      */
     public function __construct()
     {
-        load_plugin_textdomain('comment-reply-email-notification', false, basename(dirname(__FILE__)) . '/languages/');
+        load_plugin_textdomain('comment-reply-email-notification', false, basename(__DIR__) . '/languages/');
 
         /* Initialize backend stuff */
         add_action('admin_menu', [$this, 'add_admin_menu']);

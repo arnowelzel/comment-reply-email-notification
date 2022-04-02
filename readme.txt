@@ -3,7 +3,7 @@ Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 5.9
-Stable tag: 1.20.0
+Stable tag: 1.21.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,6 +23,10 @@ How to install the plugin:
 == Warning ==
 
 This plugin uses the "wp_insert_comment" hook, therefore, everytime a comment is created, a notification is likely to be sent. If you are importing comments into your blog, it's a good idea to disable this plugin.
+
+== Sending e-mails does not work? ==
+
+The plugin uses the standard WordPress e-mail function. If you have problems getting e-mails sent, you might try using plugins like https://wordpress.org/plugins/wp-mail-smtp/ to improve sending e-mails from your site.
 
 == Customizing the layout of the checkboxes ==
 
@@ -51,6 +55,11 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
 == Changelog ==
+
+= 1.21.0 =
+
+* Fixed sorting in subscription list.
+* Updated some translations.
 
 = 1.20.0 =
 

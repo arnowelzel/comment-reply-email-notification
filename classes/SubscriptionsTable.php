@@ -30,6 +30,7 @@ class SubscriptionsTable extends \WP_List_Table
         $sortable = $this->get_sortable_columns();
 
         $data = $this->load_data();
+        usort( $data, array( &$this, 'sort_data' ) );
 
         $perPage = 20;
         $currentPage = $this->get_pagenum();

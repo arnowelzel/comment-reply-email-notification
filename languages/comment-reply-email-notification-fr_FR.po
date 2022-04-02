@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2022-04-02 20:32+0000\n"
+"PO-Revision-Date: 2022-04-02 23:56+0000\n"
 "Language-Team: French (France)\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "%s a répondu à votre commentaire sur l'article"
 msgid "Arno Welzel"
 msgstr "Arno Welzel"
 
-#: classes/CommentReplyEmailNotification.php:150
+#: classes/CommentReplyEmailNotification.php:149
 msgid "Check the subscription checkbox by default"
 msgstr "Cochez la case d'abonnement par défaut"
 
@@ -39,32 +39,40 @@ msgstr "Cliquez ici pour répondre"
 msgid "Click here to stop receiving these messages"
 msgstr "Cliquez ici pour ne plus recevoir ces messages"
 
-#: classes/SubscriptionsTable.php:60
+#: classes/SubscriptionsTable.php:61
 msgid "Comment at"
 msgstr ""
 
 #. Name of the plugin
-#: classes/CommentReplyEmailNotification.php:97
+#: classes/CommentReplyEmailNotification.php:37
+#: classes/CommentReplyEmailNotification.php:38
+#: classes/CommentReplyEmailNotification.php:44
+#: classes/CommentReplyEmailNotification.php:96
 msgid "Comment Reply Email Notification"
 msgstr "Notification de réponse à un commentaire par email"
 
-#: classes/CommentReplyEmailNotification.php:194
+#: classes/CommentReplyEmailNotification.php:45
+#: classes/CommentReplyEmailNotification.php:193
 msgid "Comment subscriptions"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:154
+#: classes/SubscriptionsTable.php:58
+msgid "Date"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:153
 msgid "Display the GDPR checkbox"
 msgstr "Afficher la case à cocher GDPR"
 
-#: classes/SubscriptionsTable.php:59
+#: classes/SubscriptionsTable.php:60
 msgid "E-Mail"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:166
+#: classes/CommentReplyEmailNotification.php:165
 msgid "For documentation about hooks, styling etc. please see the description"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:144
+#: classes/CommentReplyEmailNotification.php:143
 msgid "General"
 msgstr ""
 
@@ -81,7 +89,7 @@ msgstr "http://arnowelzel.de"
 msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
 msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
 
-#: classes/CommentReplyEmailNotification.php:458
+#: classes/CommentReplyEmailNotification.php:457
 #, php-format
 msgid "I consent to %s collecting and storing the data I submit in this form."
 msgstr ""
@@ -92,38 +100,38 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:167
+#: classes/CommentReplyEmailNotification.php:166
 msgid ""
 "If you like my WordPress plugins and want to support my work I would be very "
 "happy about a donation via PayPal."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:145
+#: classes/CommentReplyEmailNotification.php:144
 msgid "Info"
 msgstr ""
 
-#: classes/SubscriptionsTable.php:58
+#: classes/SubscriptionsTable.php:59
 msgid "Name"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:230
+#: classes/CommentReplyEmailNotification.php:229
 msgid "New reply to your comment"
 msgstr "Nouvelle réponse à votre commentaire"
 
-#: classes/CommentReplyEmailNotification.php:361
-#: classes/CommentReplyEmailNotification.php:388
+#: classes/CommentReplyEmailNotification.php:360
+#: classes/CommentReplyEmailNotification.php:387
 msgid "Notify me via e-mail if anyone answers my comment."
 msgstr "Avertissez-moi par e-mail si quelqu'un répond à mon commentaire."
 
-#: classes/CommentReplyEmailNotification.php:164
+#: classes/CommentReplyEmailNotification.php:163
 msgid "Plugin version"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:462
+#: classes/CommentReplyEmailNotification.php:461
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
-#: classes/CommentReplyEmailNotification.php:158
+#: classes/CommentReplyEmailNotification.php:157
 msgid "Privacy Policy URL"
 msgstr "URL de la politique de confidentialité"
 
@@ -134,17 +142,17 @@ msgid ""
 msgstr ""
 "Envoie un e-mail à l'auteur d'un commentaire quand quelqu'un lui répond."
 
-#: classes/CommentReplyEmailNotification.php:169
+#: classes/CommentReplyEmailNotification.php:168
 msgid "Thank you :-)"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:165
+#: classes/CommentReplyEmailNotification.php:164
 msgid ""
 "This plugin allows visitors to subscribe to get answers to their comments "
 "via e-mail."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:329
+#: classes/CommentReplyEmailNotification.php:328
 msgid "Your subscription for this comment has been cancelled."
 msgstr ""
 "Vous ne recevrez plus de notification par e-mail pour les réponses à ce "

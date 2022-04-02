@@ -2,65 +2,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
 "POT-Creation-Date: 2020-08-02 07:46+0000\n"
-"PO-Revision-Date: 2021-02-28 20:28+0100\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2022-04-02 20:29+0000\n"
+"Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "Last-Translator: \n"
-"Language: el_GR\n"
+"Language: el\n"
 "X-Poedit-SearchPath-0: cren_admin.php\n"
 "X-Poedit-SearchPath-1: cren_plugin.php\n"
-
-#: comment-reply-email-notification.php:87
-msgid "Check the subscription checkbox by default"
-msgstr "Επιλέξτε το πλαίσιο ελέγχου εγγραφής από προεπιλογή"
-
-#: comment-reply-email-notification.php:95
-msgid "Display the GDPR checkbox"
-msgstr "Εμφάνιση του πλαίσιου ελέγχου GDPR"
-
-#: comment-reply-email-notification.php:103
-msgid "Privacy Policy URL"
-msgstr "URL Πολιτικής προστασίας προσωπικών δεδομένων"
-
-#: comment-reply-email-notification.php:205
-msgid "New reply to your comment"
-msgstr "Υπάρχει μία νέα απάντηση στο σχόλιό σας"
-
-#: comment-reply-email-notification.php:304
-msgid "Your subscription for this comment has been cancelled."
-msgstr "Η παρακολούθηση για αυτό το σχόλιο έχει ακυρωθεί."
-
-#: comment-reply-email-notification.php:336
-#: comment-reply-email-notification.php:363
-msgid "Notify me via e-mail if anyone answers my comment."
-msgstr "Ειδοποίηση με e-mail όταν απαντήσουν στο σχόλιο."
-
-#: comment-reply-email-notification.php:433
-#, php-format
-msgid "I consent to %s collecting and storing the data I submit in this form."
-msgstr ""
-"Συναινώ στο %s για τη συλλογή και αποθήκευση των δεδομένων που υποβάλλω σε "
-"αυτή τη φόρμα."
-
-#: comment-reply-email-notification.php:437
-msgid "Privacy Policy"
-msgstr "Πολιτική Απορρήτου"
-
-#: templates/cren/notification.php:1
-#, php-format
-msgid "Hi %s"
-msgstr "Γειά σου %s"
 
 #: templates/cren/notification.php:3
 #, php-format
 msgid "%s has replied to your comment on"
 msgstr "Ο/Η %s απάντησε στο σχόλιο σας στο"
+
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr "Arno Welzel"
+
+#: classes/CommentReplyEmailNotification.php:150
+msgid "Check the subscription checkbox by default"
+msgstr "Επιλέξτε το πλαίσιο ελέγχου εγγραφής από προεπιλογή"
 
 #: templates/cren/notification.php:9
 msgid "Click here to reply"
@@ -70,9 +37,93 @@ msgstr "Κάντε κλικ εδώ για απάντηση"
 msgid "Click here to stop receiving these messages"
 msgstr "Κάντε κλικ εδώ για να σταματήσετε να λαμβάνετε μηνύματα"
 
+#: classes/SubscriptionsTable.php:60
+msgid "Comment at"
+msgstr ""
+
 #. Name of the plugin
+#: classes/CommentReplyEmailNotification.php:97
 msgid "Comment Reply Email Notification"
 msgstr "Comment Reply Email Notification"
+
+#: classes/CommentReplyEmailNotification.php:194
+msgid "Comment subscriptions"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:154
+msgid "Display the GDPR checkbox"
+msgstr "Εμφάνιση του πλαίσιου ελέγχου GDPR"
+
+#: classes/SubscriptionsTable.php:59
+msgid "E-Mail"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:166
+msgid "For documentation about hooks, styling etc. please see the description"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:144
+msgid "General"
+msgstr ""
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr "Γειά σου %s"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr "http://arnowelzel.de"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
+
+#: classes/CommentReplyEmailNotification.php:458
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr ""
+"Συναινώ στο %s για τη συλλογή και αποθήκευση των δεδομένων που υποβάλλω σε "
+"αυτή τη φόρμα."
+
+#: classes/SubscriptionsTable.php:57
+msgid "ID"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:167
+msgid ""
+"If you like my WordPress plugins and want to support my work I would be very "
+"happy about a donation via PayPal."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:145
+msgid "Info"
+msgstr ""
+
+#: classes/SubscriptionsTable.php:58
+msgid "Name"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:230
+msgid "New reply to your comment"
+msgstr "Υπάρχει μία νέα απάντηση στο σχόλιό σας"
+
+#: classes/CommentReplyEmailNotification.php:361
+#: classes/CommentReplyEmailNotification.php:388
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr "Ειδοποίηση με e-mail όταν απαντήσουν στο σχόλιο."
+
+#: classes/CommentReplyEmailNotification.php:164
+msgid "Plugin version"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:462
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
+
+#: classes/CommentReplyEmailNotification.php:158
+msgid "Privacy Policy URL"
+msgstr "URL Πολιτικής προστασίας προσωπικών δεδομένων"
 
 #. Description of the plugin
 msgid ""
@@ -82,14 +133,16 @@ msgstr ""
 "Ειδοποίηση μέσω email στον συγγραφέα του σχόλιου όταν κάποιος απαντήσει σε "
 "αυτό."
 
-#. URI of the plugin
-msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
-msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
+#: classes/CommentReplyEmailNotification.php:169
+msgid "Thank you :-)"
+msgstr ""
 
-#. Author of the plugin
-msgid "Arno Welzel"
-msgstr "Arno Welzel"
+#: classes/CommentReplyEmailNotification.php:165
+msgid ""
+"This plugin allows visitors to subscribe to get answers to their comments "
+"via e-mail."
+msgstr ""
 
-#. Author URI of the plugin
-msgid "http://arnowelzel.de"
-msgstr "http://arnowelzel.de"
+#: classes/CommentReplyEmailNotification.php:329
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Η παρακολούθηση για αυτό το σχόλιο έχει ακυρωθεί."

@@ -1,64 +1,144 @@
-# Copyright (C) 2018 Comment Reply Email Notification
-# This file is distributed under the same license as the Comment Reply Email Notification package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Comment Reply Email Notification 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
 "email-notification\n"
-"POT-Creation-Date: 2018-12-04 11:00:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-01-20 14:34+0100\n"
+"PO-Revision-Date: 2022-04-02 20:33+0000\n"
 "Last-Translator: Zbynek GILAR <zbynda@gilar.cz>\n"
-"Language-Team: Zbynek GILAR <zbynda@gilar.cz>\n"
-"X-Generator: Poedit 2.0.6\n"
+"Language-Team: Czech\n"
+"X-Generator: Loco https://localise.biz/\n"
 "Language: cs_CZ\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
 "2;\n"
 "X-Loco-Version: 2.2.0; wp-4.9.8\n"
 
-#: cren_plugin.php:55
-msgid "Hi %s"
-msgstr "Zdravím tě %s"
-
-#: cren_plugin.php:56
+#: templates/cren/notification.php:3
 msgid "%s has replied to your comment on"
 msgstr "uživatel %s okomentoval tvůj příspěvek na:"
 
-#: cren_plugin.php:59
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:150
+msgid "Check the subscription checkbox by default"
+msgstr ""
+
+#: templates/cren/notification.php:9
 msgid "Click here to reply"
 msgstr "Klikni sem na odezvu"
 
-#: cren_plugin.php:62
-msgid "New reply to your comment"
-msgstr "Nová odpověď na tvůj komentář"
-
-#: cren_plugin.php:81
+#: templates/cren/notification.php:11
 msgid "Click here to stop receiving these messages"
 msgstr "Klikni sem, pokud chceš zrušit odesílání reakcí na tento komentář"
 
-#: cren_plugin.php:160
-msgid "Your subscription for this comment has been cancelled."
-msgstr "Přihlášení ke komentářům tohoto komentáře bylo zrušeno"
+#: classes/SubscriptionsTable.php:60
+msgid "Comment at"
+msgstr ""
 
-#: cren_plugin.php:189
-msgid "Subscribe to comment"
-msgstr "Přihlaš se k možnosti komentování"
-
-#. Plugin Name of the plugin/theme
+#. Name of the plugin
+#: classes/CommentReplyEmailNotification.php:97
 msgid "Comment Reply Email Notification"
 msgstr "Upozornění od Comment Reply Email Notification"
 
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/guhemama/worpdress-comment-reply-email-notification"
+#: classes/CommentReplyEmailNotification.php:194
+msgid "Comment subscriptions"
 msgstr ""
 
-#. Description of the plugin/theme
+#: classes/CommentReplyEmailNotification.php:154
+msgid "Display the GDPR checkbox"
+msgstr ""
+
+#: classes/SubscriptionsTable.php:59
+msgid "E-Mail"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:166
+msgid "For documentation about hooks, styling etc. please see the description"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:144
+msgid "General"
+msgstr ""
+
+#: templates/cren/notification.php:1
+msgid "Hi %s"
+msgstr "Zdravím tě %s"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:458
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr ""
+
+#: classes/SubscriptionsTable.php:57
+msgid "ID"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:167
+msgid ""
+"If you like my WordPress plugins and want to support my work I would be very "
+"happy about a donation via PayPal."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:145
+msgid "Info"
+msgstr ""
+
+#: classes/SubscriptionsTable.php:58
+msgid "Name"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:230
+msgid "New reply to your comment"
+msgstr "Nová odpověď na tvůj komentář"
+
+#: classes/CommentReplyEmailNotification.php:361
+#: classes/CommentReplyEmailNotification.php:388
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:164
+msgid "Plugin version"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:462
+msgid "Privacy Policy"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:158
+msgid "Privacy Policy URL"
+msgstr ""
+
+#. Description of the plugin
 msgid ""
 "Sends an email notification to the comment author when someone replies to "
 "his comment."
 msgstr ""
 "Odesílá e-mailové upozornění autorovi komentáře, když někdo odpoví na jeho "
 "komentář."
+
+#: classes/CommentReplyEmailNotification.php:169
+msgid "Thank you :-)"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:165
+msgid ""
+"This plugin allows visitors to subscribe to get answers to their comments "
+"via e-mail."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:329
+msgid "Your subscription for this comment has been cancelled."
+msgstr "Přihlášení ke komentářům tohoto komentáře bylo zrušeno"

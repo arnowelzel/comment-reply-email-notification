@@ -249,7 +249,7 @@ class CommentReplyEmailNotification
             return $customTemplate;
         }
 
-        return __DIR__ . '/templates/cren/notification.php';
+        return __DIR__ . '/../templates/cren/notification.php';
     }
 
     /**

@@ -45,10 +45,8 @@ class CommentReplyEmailNotification
             __('Comment subscriptions', 'comment-reply-email-notification'),
             'manage_options',
             'comment_reply_email_notification_subscriptions',
-            [$this, 'outputAdminSubscriptionsPage'],
-            'dashicons-admin-comments'
+            [$this, 'outputAdminSubscriptionsPage']
         );
-
     }
 
     /**

@@ -495,7 +495,7 @@ class CommentReplyEmailNotification
     {
         if ($this->getDisplayGdprNotice() && !is_admin()) {
             if (!isset($_POST['cren_gdpr'])) {
-                wp_die(__('Error: you must agree with the terms to send a comment. Hit the back button on your web browser and resubmit your comment if you agree with the terms.'));
+                wp_die(__('Error: you must agree with the terms to send a comment. Hit the back button on your web browser and resubmit your comment if you agree with the terms.', 'comment-reply-email-notification'));
             }
         }
 

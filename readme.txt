@@ -2,8 +2,8 @@
 Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 5.9
-Stable tag: 1.23.0
+Tested up to: 6.0
+Stable tag: 1.24.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -55,6 +55,10 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
 == Changelog ==
+
+= 1.24.0 =
+
+* Update compatibility for WordPress 6.0
 
 = 1.23.0 =
 

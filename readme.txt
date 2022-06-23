@@ -3,7 +3,7 @@ Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 6.0
-Stable tag: 1.25.0
+Stable tag: 1.26.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -54,11 +54,31 @@ The checkbox label can be changed with the `cren_comment_checkbox_label` filter.
 
 The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filter. This way you can update the text to your taste and keep the plugin updated.
 
+== Modifiying HTML output ==
+
+Using the filters `cren_gdpr_checkbox_html` and `cren_comment_subscribe_html` you can modify the HTML output of the checkboxes if needed.
+
+Example:
+
+`add_filter('cren_gdpr_checkbox_html', function(string $html_output, string $label_text, string $privacy_policy_url): string {
+    $html_output = '<div class="comment-form-gdpr-consent form-check mb-3"><input id="cren_gdpr" class="form-check-input" name="cren_gdpr" type="checkbox" value="yes" required checked><label for="cren_gdpr" class="form-check-label">' . $label_text . '<span class="text-danger fw-bold">*</span> (<a href="' . $privacy_policy_url . '" title="Privacy Policy" target="_blank" rel="internal">Privacy Policy</a>)</label></div>';
+
+    return $html_output;
+}, 10, 3);
+
+add_filter('cren_comment_subscribe_html', function(string $html_output, string $label_text, bool $checked_default): string {
+    $checked = $checked_default ? 'checked' : '';
+    $html_output = '<div class="comment-form-email-consent form-check mb-3"><input id="cren_subscribe_to_comment" class="form-check-input" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '><label for="cren_subscribe_to_comment" class="form-check-label">' . $label_text . '</label></div>';
+
+    return $html_output;
+}, 10, 3);`
+
 == Changelog ==
 
-= 1.25.0 =
+= 1.26.0 =
 
 * Added option to send notification on comment approval (thanks to Saumya Majumder for this extension).
+* Added filters to modify HTML output (thanks to Saumya Majumder for this extension).
 * Added Japanese translation (thanks to Kaede Fujisaki for this).
 
 = 1.24.0 =

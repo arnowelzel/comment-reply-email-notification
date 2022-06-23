@@ -152,6 +152,10 @@ class CommentReplyEmailNotification
                         <td><input type="checkbox" name="cren_settings[cren_display_gdpr_notice]" value="1" <?php if($this->getDisplayGdprNotice()) echo ' checked="checked"'; ?>/></td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php echo __('Send email notification when comment is approved', 'comment-reply-email-notification'); ?></th>
+                        <td><input type="checkbox" name="cren_settings[cren_send_email_on_comment_approval]" value="1" <?php if($this->getSendEmailOnCommentApprovalChecked()) echo ' checked="checked"'; ?>/></td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php echo __('Privacy Policy URL', 'comment-reply-email-notification'); ?></th>
                         <td><input type="text" class="regular-text" name="cren_settings[cren_privacy_policy_url]" value="<?php echo htmlspecialchars($this->getSetting('cren_privacy_policy_url', '')); ?>"></td>
                     </tr>
@@ -339,10 +343,12 @@ class CommentReplyEmailNotification
      */
     function commentStatusUpdate($commentId, $commentStatus)
     {
-        $comment = get_comment($commentId);
+        if( $this->getSendEmailOnCommentApprovalChecked() ) {
+            $comment = get_comment($commentId);
 
-        if ($commentStatus == 'approve') {
-            $this->commentNotification($comment->comment_ID, $comment);
+            if ($commentStatus == 'approve') {
+                $this->commentNotification($comment->comment_ID, $comment);
+            }
         }
     }
 
@@ -358,8 +364,9 @@ class CommentReplyEmailNotification
         $label = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
         $checked = $this->getDefaultChecked() ? 'checked' : '';
 
-        $fields['cren_subscribe_to_comment'] = '<p class="comment-form-comment-subscribe">'.
-            '<label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+        $subscribeToCommentsHtml = '<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+
+        $fields['cren_subscribe_to_comment'] = apply_filters( 'cren_comment_subscribe_html', $subscribeToCommentsHtml, $label, $this->getDefaultChecked() );
 
         if ($this->getDisplayGdprNotice()) {
             $fields['cren_gdpr'] = $this->renderGdprNotice();
@@ -385,7 +392,9 @@ class CommentReplyEmailNotification
             $label   = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
             $checked = $this->getDefaultChecked() ? 'checked' : '';
 
-            $checkbox = '<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on"  ' . $checked . '>' . $label . '</label></p>';
+            $subscribeToCommentsHtml = '<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+
+            $checkbox = apply_filters( 'cren_comment_subscribe_html', $subscribeToCommentsHtml, $label, $this->getDefaultChecked() );
 
             if ($this->getDisplayGdprNotice()) {
                 $checkbox .= $this->renderGdprNotice();
@@ -434,6 +443,16 @@ class CommentReplyEmailNotification
     }
 
     /**
+     * Return whether email should be send on comment approval.
+     * 
+     * @return bool
+     */
+    function getSendEmailOnCommentApprovalChecked()
+    {
+        return $this->getSetting('cren_send_email_on_comment_approval', false);
+    }
+
+    /**
      * Gets the privacy policy URL.
      *
      * @return string
@@ -458,7 +477,14 @@ class CommentReplyEmailNotification
         $privacyPolicyUrl = $this->getPrivacyPolicyUrl();
         $privacyPolicy    = "<a target='_blank' href='{$privacyPolicyUrl}'>(" . __('Privacy Policy', 'comment-reply-email-notification') . ")</a>";
 
-        return '<p class="comment-form-comment-subscribe"><label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';
+        $finalGdprHtml = '<p class="comment-form-comment-subscribe"><label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">' . $label . ' ' . $privacyPolicy . ' <span class="required">*</span></label></p>';
+
+        return apply_filters(
+            'cren_gdpr_checkbox_html',
+            $finalGdprHtml,
+            $label,
+            $privacyPolicyUrl
+        );
     }
 
     /**

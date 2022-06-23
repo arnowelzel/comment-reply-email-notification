@@ -152,6 +152,10 @@ class CommentReplyEmailNotification
                         <td><input type="checkbox" name="cren_settings[cren_display_gdpr_notice]" value="1" <?php if($this->getDisplayGdprNotice()) echo ' checked="checked"'; ?>/></td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php echo __('Send email notification when comment is approved', 'comment-reply-email-notification'); ?></th>
+                        <td><input type="checkbox" name="cren_settings[cren_send_email_on_comment_approval]" value="1" <?php if($this->getSendEmailOnCommentApprovalChecked()) echo ' checked="checked"'; ?>/></td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php echo __('Privacy Policy URL', 'comment-reply-email-notification'); ?></th>
                         <td><input type="text" class="regular-text" name="cren_settings[cren_privacy_policy_url]" value="<?php echo htmlspecialchars($this->getSetting('cren_privacy_policy_url', '')); ?>"></td>
                     </tr>
@@ -339,9 +343,7 @@ class CommentReplyEmailNotification
      */
     function commentStatusUpdate($commentId, $commentStatus)
     {
-        $disableEmailNotificationOnCommentApproval = apply_filters( 'cren_disable_email_notification_on_comment_approval', false );
-
-        if( !$disableEmailNotificationOnCommentApproval ) {
+        if( $this->getSendEmailOnCommentApprovalChecked() ) {
             $comment = get_comment($commentId);
 
             if ($commentStatus == 'approve') {
@@ -438,6 +440,16 @@ class CommentReplyEmailNotification
     function getDisplayGdprNotice()
     {
         return $this->getSetting('cren_display_gdpr_notice', false);
+    }
+
+    /**
+     * Return whether email should be send on comment approval.
+     * 
+     * @return bool
+     */
+    function getSendEmailOnCommentApprovalChecked()
+    {
+        return $this->getSetting('cren_send_email_on_comment_approval', false);
     }
 
     /**

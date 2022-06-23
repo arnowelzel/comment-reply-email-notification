@@ -56,6 +56,11 @@ The GDPR checkbox label can be changed with the `cren_gdpr_checkbox_label` filte
 
 == Changelog ==
 
+= 1.25.0 =
+
+* Added option to send notification on comment approval (thanks to Saumya Majumder for this extension).
+* Added Japanese translation (thanks to Kaede Fujisaki for this).
+
 = 1.24.0 =
 
 * Update compatibility for WordPress 6.0

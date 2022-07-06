@@ -3,7 +3,7 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.25.0';
+    const CREN_VERSION = '1.27.0';
 
     /**
      * Constructor
@@ -150,10 +150,6 @@ class CommentReplyEmailNotification
                     <tr>
                         <th scope="row"><?php echo __('Display the GDPR checkbox', 'comment-reply-email-notification'); ?></th>
                         <td><input type="checkbox" name="cren_settings[cren_display_gdpr_notice]" value="1" <?php if($this->getDisplayGdprNotice()) echo ' checked="checked"'; ?>/></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><?php echo __('Send email notification when comment is approved', 'comment-reply-email-notification'); ?></th>
-                        <td><input type="checkbox" name="cren_settings[cren_send_email_on_comment_approval]" value="1" <?php if($this->getSendEmailOnCommentApprovalChecked()) echo ' checked="checked"'; ?>/></td>
                     </tr>
                     <tr>
                         <th scope="row"><?php echo __('Privacy Policy URL', 'comment-reply-email-notification'); ?></th>
@@ -343,12 +339,10 @@ class CommentReplyEmailNotification
      */
     function commentStatusUpdate($commentId, $commentStatus)
     {
-        if( $this->getSendEmailOnCommentApprovalChecked() ) {
-            $comment = get_comment($commentId);
+        $comment = get_comment($commentId);
 
-            if ($commentStatus == 'approve') {
-                $this->commentNotification($comment->comment_ID, $comment);
-            }
+        if ($commentStatus == 'approve') {
+            $this->commentNotification($comment->comment_ID, $comment);
         }
     }
 
@@ -440,16 +434,6 @@ class CommentReplyEmailNotification
     function getDisplayGdprNotice()
     {
         return $this->getSetting('cren_display_gdpr_notice', false);
-    }
-
-    /**
-     * Return whether email should be send on comment approval.
-     * 
-     * @return bool
-     */
-    function getSendEmailOnCommentApprovalChecked()
-    {
-        return $this->getSetting('cren_send_email_on_comment_approval', false);
     }
 
     /**

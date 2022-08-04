@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Comment Reply Email Notification\n"
+"POT-Creation-Date: 2022-06-23 11:06+0000\n"
+"PO-Revision-Date: 2022-08-04 11:45+0430\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Last-Translator: \n"
+"Language: fa_IR\n"
+"X-Poedit-SearchPath-0: cren_admin.php\n"
+"X-Poedit-SearchPath-1: cren_plugin.php\n"
+
+#: templates/cren/notification.php:3
+#, php-format
+msgid "%s has replied to your comment on"
+msgstr "%s به نظر شما پاسخ داده است در"
+
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr "Arno Welzel"
+
+#: classes/CommentReplyEmailNotification.php:147
+msgid "Check the subscription checkbox by default"
+msgstr "چک باکس اشتراک نظرات را به طور پیش فرض علامت بزنید"
+
+#: templates/cren/notification.php:9
+msgid "Click here to reply"
+msgstr "برای پاسخ دادن، اینجا کلیک کنید"
+
+#: templates/cren/notification.php:11
+msgid "Click here to stop receiving these messages"
+msgstr "برای توقف دریافت این ایمیل‌ها، اینجا را کلیک کنید"
+
+#: classes/SubscriptionsTable.php:61
+msgid "Comment at"
+msgstr "نظر در"
+
+#. Name of the plugin
+#: classes/CommentReplyEmailNotification.php:37
+#: classes/CommentReplyEmailNotification.php:38
+#: classes/CommentReplyEmailNotification.php:44
+#: classes/CommentReplyEmailNotification.php:94
+msgid "Comment Reply Email Notification"
+msgstr "Comment Reply Email Notification"
+
+#: classes/CommentReplyEmailNotification.php:45
+#: classes/CommentReplyEmailNotification.php:195
+msgid "Comment subscriptions"
+msgstr "اشتراک‌ها"
+
+#: classes/SubscriptionsTable.php:58
+msgid "Date"
+msgstr "تاریخ"
+
+#: classes/CommentReplyEmailNotification.php:151
+msgid "Display the GDPR checkbox"
+msgstr "چک باکس GDPR را نمایش دهید"
+
+#: classes/SubscriptionsTable.php:60
+msgid "E-Mail"
+msgstr "ایمیل"
+
+#: classes/CommentReplyEmailNotification.php:524
+msgid ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."
+msgstr ""
+"خطا: برای ارسال نظر باید با شرایط موافقت کنید. دکمه بازگشت را در مرورگر وب "
+"خود بزنید و در صورت موافقت با شرایط، نظر خود را مجددا ارسال کنید."
+
+#: classes/CommentReplyEmailNotification.php:167
+msgid "For documentation about hooks, styling etc. please see the description"
+msgstr "For documentation about hooks, styling etc. please see the description"
+
+#: classes/CommentReplyEmailNotification.php:141
+msgid "General"
+msgstr "عمومی"
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr "سلام %s"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr "http://arnowelzel.de"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
+
+#: classes/CommentReplyEmailNotification.php:474
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr ""
+"من با جمع‌آوری و ذخیره %s داده‌هایی که در این فرم ارسال می‌کنم، موافقت می‌کنم."
+
+#: classes/SubscriptionsTable.php:57
+msgid "ID"
+msgstr "ID"
+
+#: classes/CommentReplyEmailNotification.php:168
+msgid ""
+"If you like my WordPress plugins and want to support my work I would be very "
+"happy about a donation via PayPal."
+msgstr ""
+"If you like my WordPress plugins and want to support my work I would be very "
+"happy about a donation via PayPal."
+
+#: classes/CommentReplyEmailNotification.php:142
+msgid "Info"
+msgstr "Info"
+
+#: classes/SubscriptionsTable.php:59
+msgid "Name"
+msgstr "نام"
+
+#: classes/CommentReplyEmailNotification.php:231
+msgid "New reply to your comment"
+msgstr "پاسخ جدید به نظر شما"
+
+#: classes/CommentReplyEmailNotification.php:364
+#: classes/CommentReplyEmailNotification.php:392
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr "اگر کسی به نظر من پاسخ داد از طریق ایمیل به من اطلاع دهید."
+
+#: classes/CommentReplyEmailNotification.php:165
+msgid "Plugin version"
+msgstr "Plugin version"
+
+#: classes/CommentReplyEmailNotification.php:478
+msgid "Privacy Policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: classes/CommentReplyEmailNotification.php:159
+msgid "Privacy Policy URL"
+msgstr "لینک سیاست حفظ حریم خصوصی"
+
+#: classes/CommentReplyEmailNotification.php:155
+msgid "Send email notification when comment is approved"
+msgstr "وقتی نظر تایید شد، ایمیلی ارسال کنید"
+
+#. Description of the plugin
+msgid ""
+"Sends an email notification to the comment author when someone replies to his "
+"comment."
+msgstr ""
+"Sends an email notification to the comment author when someone replies to his "
+"comment."
+
+#: classes/CommentReplyEmailNotification.php:170
+msgid "Thank you :-)"
+msgstr "Thank you :-)"
+
+#: classes/CommentReplyEmailNotification.php:166
+msgid ""
+"This plugin allows visitors to subscribe to get answers to their comments via "
+"e-mail."
+msgstr ""
+"This plugin allows visitors to subscribe to get answers to their comments via "
+"e-mail."
+
+#: classes/CommentReplyEmailNotification.php:330
+msgid "Your subscription for this comment has been cancelled."
+msgstr "اشتراک شما برای این نظر لغو شد."

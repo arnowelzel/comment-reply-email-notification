@@ -3,15 +3,13 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.27.0';
+    const CREN_VERSION = '1.28.0';
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        load_plugin_textdomain('comment-reply-email-notification', false, 'comment-reply-email-notification/languages/');
-
         /* Initialize backend stuff */
         add_action('admin_menu', [$this, 'addAdminMenu']);
         add_action('admin_init', [$this, 'settingsInit']);
@@ -23,7 +21,7 @@ class CommentReplyEmailNotification
         add_filter('comment_form_default_fields', [$this, 'commentFields']);
         add_filter('comment_form_submit_field', [$this, 'commentFieldsLoggedIn']);
         add_action('comment_post', [$this, 'persistSubscriptionOptIn']);
-        add_action('init', [$this, 'unsubscribeRoute']);
+        add_action('init', [$this, 'init']);
     }
 
     /**
@@ -293,12 +291,14 @@ class CommentReplyEmailNotification
     }
 
     /**
-     * Processes the unsubscribe request.
+     * Intialize plugin and processes the unsubscribe if requested.
      *
      * @return void
      */
-    function unsubscribeRoute()
+    function init()
     {
+        load_plugin_textdomain('comment-reply-email-notification', false, 'comment-reply-email-notification/languages/');
+
         $requestUri = $_SERVER['REQUEST_URI'];
 
         if (preg_match('/cren\/unsubscribe/', $requestUri)) {

@@ -77,6 +77,10 @@ add_filter('cren_comment_subscribe_html', function(string $html_output, string $
 
 = 1.28.0 =
 
+* Added Farsi (Iran) translation (thanks to Mahdi for this contribution).
+
+= 1.28.0 =
+
 * Changed loading of translations so the custom files provided by LOCO Translate also work.
 
 = 1.27.0 =

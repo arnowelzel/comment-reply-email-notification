@@ -3,7 +3,7 @@ Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 6.0
-Stable tag: 1.28.0
+Stable tag: 1.29.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -75,13 +75,13 @@ add_filter('cren_comment_subscribe_html', function(string $html_output, string $
 
 == Changelog ==
 
+= 1.29.0 =
+
+* Changed loading of translations so the custom files provided by LOCO Translate also work.
+
 = 1.28.0 =
 
 * Added Farsi (Iran) translation (thanks to Mahdi for this contribution).
-
-= 1.28.0 =
-
-* Changed loading of translations so the custom files provided by LOCO Translate also work.
 
 = 1.27.0 =
 

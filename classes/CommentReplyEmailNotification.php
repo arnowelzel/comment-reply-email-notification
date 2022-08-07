@@ -3,7 +3,7 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.28.0';
+    const CREN_VERSION = '1.29.0';
 
     /**
      * Constructor
@@ -291,7 +291,7 @@ class CommentReplyEmailNotification
     }
 
     /**
-     * Intialize plugin and processes the unsubscribe if requested.
+     * Intialize plugin and process unsubscribe if requested.
      *
      * @return void
      */
@@ -300,7 +300,6 @@ class CommentReplyEmailNotification
         load_plugin_textdomain('comment-reply-email-notification', false, 'comment-reply-email-notification/languages/');
 
         $requestUri = $_SERVER['REQUEST_URI'];
-
         if (preg_match('/cren\/unsubscribe/', $requestUri)) {
             $commentId = filter_input(INPUT_GET, 'comment', FILTER_SANITIZE_NUMBER_INT);
             $comment   = get_comment($commentId);

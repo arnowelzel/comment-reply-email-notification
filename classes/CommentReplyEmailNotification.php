@@ -151,7 +151,18 @@ class CommentReplyEmailNotification
                     </tr>
                     <tr>
                         <th scope="row"><?php echo __('Privacy Policy URL', 'comment-reply-email-notification'); ?></th>
-                        <td><input type="text" class="regular-text" name="cren_settings[cren_privacy_policy_url]" value="<?php echo htmlspecialchars($this->getSetting('cren_privacy_policy_url', '')); ?>"></td>
+                        <td><input type="text" class="regular-text" name="cren_settings[cren_privacy_policy_url]" value="<?php echo esc_html($this->getSetting('cren_privacy_policy_url', '')); ?>"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php echo __('Subject for e-mails', 'comment-reply-email-notification'); ?></th>
+                        <td>
+                            <label><input type="radio" name="cren_settings[cren_subject_type]" value="1"<?php if($this->getSubjectType() === 1) echo ' checked="checked"'; ?>/> <?php echo sprintf('[%s] - %s', __('Name of the website', 'comment-reply-email-notification'), __('New reply to your comment', 'comment-reply-email-notification')); ?></label><br>
+                            <label><input type="radio" name="cren_settings[cren_subject_type]" value="2"<?php if($this->getSubjectType() === 2) echo ' checked="checked"'; ?>/> <?php echo __('Custom text', 'comment-reply-email-notification'); ?></label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php echo __('Custom text for e-mail subject', 'comment-reply-email-notification'); ?></th>
+                        <td><input type="text" class="regular-text" name="cren_settings[cren_custom_subject_text]" value="<?php echo esc_html($this->getSetting('cren_custom_subject_text', '')); ?>" placeholder="<?php echo __('New reply to your comment', 'comment-reply-email-notification') ?>"></td>
                     </tr>
                 </table>
 
@@ -222,7 +233,11 @@ class CommentReplyEmailNotification
             require $this->getNotificationTemplatePath();
             $body = ob_get_clean();
 
-            $title = html_entity_decode(get_option('blogname'), ENT_QUOTES) . ' - ' . __('New reply to your comment', 'comment-reply-email-notification', $body);
+            if ($this->getSubjectType() === 1) {
+				$title = html_entity_decode(get_option('blogname'), ENT_QUOTES) . ' - ' . __('New reply to your comment', 'comment-reply-email-notification');
+			} else {
+                $title = $this->getSetting('cren_custom_subject_text', __('New reply to your comment', 'comment-reply-email-notification'));
+			}
 
             add_filter('wp_mail_content_type', [$this, 'mailContentTypeFilter']);
             wp_mail($email, $title, $body);
@@ -444,6 +459,16 @@ class CommentReplyEmailNotification
     {
         return $this->getSetting('cren_privacy_policy_url', '');
     }
+
+	/**
+	 * Returns the type of subject text to be used for the e-mail
+     *
+     * @return int
+	 */
+    function getSubjectType()
+	{
+		return (int)$this->getSetting('cren_subject_type', 1);
+	}
 
     /**
      * Renders the GDPR checkbox.

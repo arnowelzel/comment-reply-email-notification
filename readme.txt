@@ -2,7 +2,7 @@
 Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
-Tested up to: 6.0
+Tested up to: 6.2
 Stable tag: 1.29.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2

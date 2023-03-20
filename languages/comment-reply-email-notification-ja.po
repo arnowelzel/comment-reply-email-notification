@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
 "POT-Creation-Date: 2020-08-02 07:46+0000\n"
-"PO-Revision-Date: 2021-06-10 21:39+0900\n"
+"PO-Revision-Date: 2023-01-11 18:59+0000\n"
 "Last-Translator: kaede <psi@7io.org>\n"
-"Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
+"Language-Team: Japanese\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,49 +16,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: cren_admin.php\n"
 "X-Poedit-SearchPath-1: cren_plugin.php\n"
 
-#: comment-reply-email-notification.php:87
-msgid "Check the subscription checkbox by default"
-msgstr "デフォルトで「通知する」にチェックを入れる"
-
-#: comment-reply-email-notification.php:95
-msgid "Display the GDPR checkbox"
-msgstr "GDPRに関するチェックボックスを表示する"
-
-#: comment-reply-email-notification.php:103
-msgid "Privacy Policy URL"
-msgstr "プライバシー・ポリシーのURL"
-
-#: comment-reply-email-notification.php:205
-msgid "New reply to your comment"
-msgstr "あなたのコメントに新しい返信がありました"
-
-#: comment-reply-email-notification.php:304
-msgid "Your subscription for this comment has been cancelled."
-msgstr "このコメントに関する通知は解除されました。"
-
-#: comment-reply-email-notification.php:336
-#: comment-reply-email-notification.php:363
-msgid "Notify me via e-mail if anyone answers my comment."
-msgstr "コメントに返信があったらメールで通知する。"
-
-#: comment-reply-email-notification.php:433
-#, php-format
-msgid "I consent to %s collecting and storing the data I submit in this form."
-msgstr "わたしは%sがこのフォームから送信されたデータを収集し保存することに同意します。"
-
-#: comment-reply-email-notification.php:437
-msgid "Privacy Policy"
-msgstr "プライバシー・ポリシ"
-
-#: templates/cren/notification.php:1
-#, php-format
-msgid "Hi %s"
-msgstr "こんにちは、 %s さん！"
-
 #: templates/cren/notification.php:3
 #, php-format
 msgid "%s has replied to your comment on"
 msgstr "%s さんがあなたのコメントに返信しました。"
+
+#. Author of the plugin
+msgid "Arno Welzel"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:145
+msgid "Check the subscription checkbox by default"
+msgstr "デフォルトで「通知する」にチェックを入れる"
 
 #: templates/cren/notification.php:9
 msgid "Click here to reply"
@@ -68,12 +37,141 @@ msgstr "返信するにはこちらをクリックしてください"
 msgid "Click here to stop receiving these messages"
 msgstr "この通知を止めたい場合は、こちらをクリックしてください"
 
+#: classes/SubscriptionsTable.php:61
+msgid "Comment at"
+msgstr ""
+
 #. Name of the plugin
+#: classes/CommentReplyEmailNotification.php:35
+#: classes/CommentReplyEmailNotification.php:36
+#: classes/CommentReplyEmailNotification.php:42
+#: classes/CommentReplyEmailNotification.php:92
 msgid "Comment Reply Email Notification"
 msgstr "コメントへの返信をメールで通知する"
+
+#: classes/CommentReplyEmailNotification.php:43
+#: classes/CommentReplyEmailNotification.php:200
+msgid "Comment subscriptions"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:160
+msgid "Custom text"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:164
+msgid "Custom text for e-mail subject"
+msgstr ""
+
+#: classes/SubscriptionsTable.php:58
+msgid "Date"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:149
+msgid "Display the GDPR checkbox"
+msgstr "GDPRに関するチェックボックスを表示する"
+
+#: classes/SubscriptionsTable.php:60
+msgid "E-Mail"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:532
+msgid ""
+"Error: you must agree with the terms to send a comment. Hit the back button "
+"on your web browser and resubmit your comment if you agree with the terms."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:172
+msgid "For documentation about hooks, styling etc. please see the description"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:139
+msgid "General"
+msgstr ""
+
+#: templates/cren/notification.php:1
+#, php-format
+msgid "Hi %s"
+msgstr "こんにちは、 %s さん！"
+
+#. Author URI of the plugin
+msgid "http://arnowelzel.de"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:482
+#, php-format
+msgid "I consent to %s collecting and storing the data I submit in this form."
+msgstr "わたしは%sがこのフォームから送信されたデータを収集し保存することに同意します。"
+
+#: classes/SubscriptionsTable.php:57
+msgid "ID"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:173
+msgid ""
+"If you like my WordPress plugins and want to support my work I would be very "
+"happy about a donation via PayPal."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:140
+msgid "Info"
+msgstr ""
+
+#: classes/SubscriptionsTable.php:59
+msgid "Name"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:159
+msgid "Name of the website"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:159
+#: classes/CommentReplyEmailNotification.php:165
+#: classes/CommentReplyEmailNotification.php:237
+#: classes/CommentReplyEmailNotification.php:239
+msgid "New reply to your comment"
+msgstr "あなたのコメントに新しい返信がありました"
+
+#: classes/CommentReplyEmailNotification.php:372
+#: classes/CommentReplyEmailNotification.php:400
+msgid "Notify me via e-mail if anyone answers my comment."
+msgstr "コメントに返信があったらメールで通知する。"
+
+#: classes/CommentReplyEmailNotification.php:170
+msgid "Plugin version"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:486
+msgid "Privacy Policy"
+msgstr "プライバシー・ポリシ"
+
+#: classes/CommentReplyEmailNotification.php:153
+msgid "Privacy Policy URL"
+msgstr "プライバシー・ポリシーのURL"
 
 #. Description of the plugin
 msgid ""
 "Sends an email notification to the comment author when someone replies to "
 "his comment."
 msgstr "だれかがコメントに対して返信したとき、そのコメントの著者にメールで通知します。"
+
+#: classes/CommentReplyEmailNotification.php:157
+msgid "Subject for e-mails"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:175
+msgid "Thank you :-)"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:171
+msgid ""
+"This plugin allows visitors to subscribe to get answers to their comments "
+"via e-mail."
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:340
+msgid "Your subscription for this comment has been cancelled."
+msgstr "このコメントに関する通知は解除されました。"

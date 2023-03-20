@@ -78,6 +78,7 @@ add_filter('cren_comment_subscribe_html', function(string $html_output, string $
 = 1.29.0 =
 
 * Changed loading of translations so the custom files provided by LOCO Translate also work.
+* Added option for custom e-mail subject for comment notifications.
 
 = 1.28.0 =
 

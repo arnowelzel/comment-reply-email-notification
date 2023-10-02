@@ -248,12 +248,14 @@ class CommentReplyEmailNotification
 
             add_filter('wp_mail_content_type', [$this, 'mailContentTypeFilter']);
             $from = $this->getSetting('cren_from', '');
-            $header = '';
             if ('' !== $from) {
-                $header = ['From: ' . $from];
+                add_filter('wp_mail_from', [$this, 'mailFromFilter']);
             }
-            wp_mail($email, $title, $body, $header);
+            wp_mail($email, $title, $body);
             remove_filter('wp_mail_content_type', [$this, 'mailContentTypeFilter']);
+            if ('' !== $from) {
+                remove_filter('wp_mail_from', [$this, 'mailFromFilter']);
+            }
         }
     }
 
@@ -284,6 +286,17 @@ class CommentReplyEmailNotification
     function mailContentTypeFilter($contentType)
     {
         return 'text/html';
+    }
+
+    /**
+     * Filter that changes the from address when sending e-mails.
+     *
+     * @param  string $contentType The content type
+     * @return string
+     */
+    function mailFromFilter($contentType)
+    {
+        return $this->getSetting('cren_from', '');
     }
 
     /**

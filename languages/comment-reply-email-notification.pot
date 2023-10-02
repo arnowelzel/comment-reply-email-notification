@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Comment Reply Email Notification\n"
-"POT-Creation-Date: 2023-01-11 18:58+0000\n"
+"POT-Creation-Date: 2023-10-02 19:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,15 +51,15 @@ msgid "Comment Reply Email Notification"
 msgstr ""
 
 #: classes/CommentReplyEmailNotification.php:43
-#: classes/CommentReplyEmailNotification.php:200
+#: classes/CommentReplyEmailNotification.php:207
 msgid "Comment subscriptions"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:160
+#: classes/CommentReplyEmailNotification.php:167
 msgid "Custom text"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:164
+#: classes/CommentReplyEmailNotification.php:171
 msgid "Custom text for e-mail subject"
 msgstr ""
 
@@ -75,14 +75,18 @@ msgstr ""
 msgid "E-Mail"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:532
+#: classes/CommentReplyEmailNotification.php:544
 msgid ""
 "Error: you must agree with the terms to send a comment. Hit the back button "
 "on your web browser and resubmit your comment if you agree with the terms."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:172
+#: classes/CommentReplyEmailNotification.php:179
 msgid "For documentation about hooks, styling etc. please see the description"
+msgstr ""
+
+#: classes/CommentReplyEmailNotification.php:157
+msgid "From address for e-mails"
 msgstr ""
 
 #: classes/CommentReplyEmailNotification.php:139
@@ -102,7 +106,7 @@ msgstr ""
 msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:482
+#: classes/CommentReplyEmailNotification.php:494
 #, php-format
 msgid "I consent to %s collecting and storing the data I submit in this form."
 msgstr ""
@@ -111,7 +115,7 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:173
+#: classes/CommentReplyEmailNotification.php:180
 msgid ""
 "If you like my WordPress plugins and want to support my work I would be very "
 "happy about a donation via PayPal."
@@ -121,31 +125,35 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
+#: classes/CommentReplyEmailNotification.php:160
+msgid "leave empty for default sender"
+msgstr ""
+
 #: classes/SubscriptionsTable.php:59
 msgid "Name"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:159
+#: classes/CommentReplyEmailNotification.php:166
 msgid "Name of the website"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:159
-#: classes/CommentReplyEmailNotification.php:165
-#: classes/CommentReplyEmailNotification.php:237
-#: classes/CommentReplyEmailNotification.php:239
+#: classes/CommentReplyEmailNotification.php:166
+#: classes/CommentReplyEmailNotification.php:172
+#: classes/CommentReplyEmailNotification.php:244
+#: classes/CommentReplyEmailNotification.php:246
 msgid "New reply to your comment"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:372
-#: classes/CommentReplyEmailNotification.php:400
+#: classes/CommentReplyEmailNotification.php:384
+#: classes/CommentReplyEmailNotification.php:412
 msgid "Notify me via e-mail if anyone answers my comment."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:170
+#: classes/CommentReplyEmailNotification.php:177
 msgid "Plugin version"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:486
+#: classes/CommentReplyEmailNotification.php:498
 msgid "Privacy Policy"
 msgstr ""
 
@@ -159,20 +167,20 @@ msgid ""
 "his comment."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:157
+#: classes/CommentReplyEmailNotification.php:164
 msgid "Subject for e-mails"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:175
+#: classes/CommentReplyEmailNotification.php:182
 msgid "Thank you :-)"
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:171
+#: classes/CommentReplyEmailNotification.php:178
 msgid ""
 "This plugin allows visitors to subscribe to get answers to their comments "
 "via e-mail."
 msgstr ""
 
-#: classes/CommentReplyEmailNotification.php:340
+#: classes/CommentReplyEmailNotification.php:352
 msgid "Your subscription for this comment has been cancelled."
 msgstr ""

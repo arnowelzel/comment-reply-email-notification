@@ -3,7 +3,7 @@ Contributors: awelzel, guhemama
 Tags: comment, email, reply, notification
 Requires at least: 4.4.0
 Tested up to: 6.3
-Stable tag: 1.30.0
+Stable tag: 1.31.0
 Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -74,6 +74,10 @@ add_filter('cren_comment_subscribe_html', function(string $html_output, string $
 }, 10, 3);`
 
 == Changelog ==
+
+= 1.31.0 =
+
+* Added option to set a custom from address for outgoing e-mails.
 
 = 1.30.0 =
 

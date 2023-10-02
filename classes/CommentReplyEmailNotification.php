@@ -3,7 +3,7 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.30.0';
+    const CREN_VERSION = '1.31.0';
 
     /**
      * Constructor
@@ -154,6 +154,13 @@ class CommentReplyEmailNotification
                         <td><input type="text" class="regular-text" name="cren_settings[cren_privacy_policy_url]" value="<?php echo esc_html($this->getSetting('cren_privacy_policy_url', '')); ?>"></td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php echo __('From address for e-mails', 'comment-reply-email-notification'); ?></th>
+                        <td>
+                            <input type="text" class="regular-text" name="cren_settings[cren_from]" value="<?php echo esc_html($this->getSetting('cren_from', '')); ?>">
+                            <p class="description"><?php echo __('leave empty for default sender', 'comment-reply-email-notification') ?>
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php echo __('Subject for e-mails', 'comment-reply-email-notification'); ?></th>
                         <td>
                             <label><input type="radio" name="cren_settings[cren_subject_type]" value="1"<?php if($this->getSubjectType() === 1) echo ' checked="checked"'; ?>/> <?php echo sprintf('[%s] - %s', __('Name of the website', 'comment-reply-email-notification'), __('New reply to your comment', 'comment-reply-email-notification')); ?></label><br>
@@ -240,7 +247,12 @@ class CommentReplyEmailNotification
 			}
 
             add_filter('wp_mail_content_type', [$this, 'mailContentTypeFilter']);
-            wp_mail($email, $title, $body);
+            $from = $this->getSetting('cren_from', '');
+            $header = '';
+            if ('' !== $from) {
+                $header = ['From: ' . $from];
+            }
+            wp_mail($email, $title, $body, $header);
             remove_filter('wp_mail_content_type', [$this, 'mailContentTypeFilter']);
         }
     }

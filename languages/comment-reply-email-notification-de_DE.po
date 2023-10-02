@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2023-01-11 18:59+0000\n"
+"PO-Revision-Date: 2023-10-02 19:11+0000\n"
 "Last-Translator: Arno Welzel\n"
 "Language-Team: Deutsch\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -52,15 +52,15 @@ msgid "Comment Reply Email Notification"
 msgstr "Comment Reply Email Notification"
 
 #: classes/CommentReplyEmailNotification.php:43
-#: classes/CommentReplyEmailNotification.php:200
+#: classes/CommentReplyEmailNotification.php:207
 msgid "Comment subscriptions"
 msgstr "Kommentar-Abonnements"
 
-#: classes/CommentReplyEmailNotification.php:160
+#: classes/CommentReplyEmailNotification.php:167
 msgid "Custom text"
 msgstr "Eigener Text"
 
-#: classes/CommentReplyEmailNotification.php:164
+#: classes/CommentReplyEmailNotification.php:171
 msgid "Custom text for e-mail subject"
 msgstr "Eigener Text für E-Mail-Betreff"
 
@@ -76,7 +76,7 @@ msgstr "DSGVO-Option anzeigen"
 msgid "E-Mail"
 msgstr "E-Mail"
 
-#: classes/CommentReplyEmailNotification.php:532
+#: classes/CommentReplyEmailNotification.php:544
 msgid ""
 "Error: you must agree with the terms to send a comment. Hit the back button "
 "on your web browser and resubmit your comment if you agree with the terms."
@@ -85,9 +85,13 @@ msgstr ""
 "Klicken Sie in Ihrem Webbrowser auf die Schaltfläche „Zurück“ und senden Sie "
 "Ihren Kommentar erneut, wenn Sie mit den Bedingungen einverstanden sind."
 
-#: classes/CommentReplyEmailNotification.php:172
+#: classes/CommentReplyEmailNotification.php:179
 msgid "For documentation about hooks, styling etc. please see the description"
 msgstr "Informationen zu Haken, Styling usw. finden Sie in der Beschreibung"
+
+#: classes/CommentReplyEmailNotification.php:157
+msgid "From address for e-mails"
+msgstr "Absenderadresse für E-Mails"
 
 #: classes/CommentReplyEmailNotification.php:139
 msgid "General"
@@ -106,7 +110,7 @@ msgstr "http://arnowelzel.de"
 msgid "https://wordpress.org/plugins/comment-reply-email-notification/"
 msgstr "https://wordpress.org/plugins/comment-reply-email-notification/"
 
-#: classes/CommentReplyEmailNotification.php:482
+#: classes/CommentReplyEmailNotification.php:494
 #, php-format
 msgid "I consent to %s collecting and storing the data I submit in this form."
 msgstr ""
@@ -117,7 +121,7 @@ msgstr ""
 msgid "ID"
 msgstr "ID"
 
-#: classes/CommentReplyEmailNotification.php:173
+#: classes/CommentReplyEmailNotification.php:180
 msgid ""
 "If you like my WordPress plugins and want to support my work I would be very "
 "happy about a donation via PayPal."
@@ -129,33 +133,37 @@ msgstr ""
 msgid "Info"
 msgstr "Info"
 
+#: classes/CommentReplyEmailNotification.php:160
+msgid "leave empty for default sender"
+msgstr "leer lassen für Standard-Absender"
+
 #: classes/SubscriptionsTable.php:59
 msgid "Name"
 msgstr "Name"
 
-#: classes/CommentReplyEmailNotification.php:159
+#: classes/CommentReplyEmailNotification.php:166
 #| msgid "Name of your website"
 msgid "Name of the website"
 msgstr "Name der Website"
 
-#: classes/CommentReplyEmailNotification.php:159
-#: classes/CommentReplyEmailNotification.php:165
-#: classes/CommentReplyEmailNotification.php:237
-#: classes/CommentReplyEmailNotification.php:239
+#: classes/CommentReplyEmailNotification.php:166
+#: classes/CommentReplyEmailNotification.php:172
+#: classes/CommentReplyEmailNotification.php:244
+#: classes/CommentReplyEmailNotification.php:246
 msgid "New reply to your comment"
 msgstr "Eine Reaktion auf Deinen Kommentar"
 
-#: classes/CommentReplyEmailNotification.php:372
-#: classes/CommentReplyEmailNotification.php:400
+#: classes/CommentReplyEmailNotification.php:384
+#: classes/CommentReplyEmailNotification.php:412
 msgid "Notify me via e-mail if anyone answers my comment."
 msgstr ""
 "Mich per E-Mail benachrichtigen, wenn jemand auf meinen Kommentar antwortet."
 
-#: classes/CommentReplyEmailNotification.php:170
+#: classes/CommentReplyEmailNotification.php:177
 msgid "Plugin version"
 msgstr "Plugin-Version"
 
-#: classes/CommentReplyEmailNotification.php:486
+#: classes/CommentReplyEmailNotification.php:498
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
@@ -171,15 +179,15 @@ msgstr ""
 "Versendet eine E-Mail an den Autor eines Kommentar wenn jemand darauf "
 "reagiert."
 
-#: classes/CommentReplyEmailNotification.php:157
+#: classes/CommentReplyEmailNotification.php:164
 msgid "Subject for e-mails"
 msgstr "Betreff für E-Mails"
 
-#: classes/CommentReplyEmailNotification.php:175
+#: classes/CommentReplyEmailNotification.php:182
 msgid "Thank you :-)"
 msgstr "Danke :-)"
 
-#: classes/CommentReplyEmailNotification.php:171
+#: classes/CommentReplyEmailNotification.php:178
 msgid ""
 "This plugin allows visitors to subscribe to get answers to their comments "
 "via e-mail."
@@ -187,6 +195,6 @@ msgstr ""
 "Dieses Plugin ermöglicht es Besuchern, Antworten auf ihre Kommentare per E-"
 "Mail zu abonnieren."
 
-#: classes/CommentReplyEmailNotification.php:340
+#: classes/CommentReplyEmailNotification.php:352
 msgid "Your subscription for this comment has been cancelled."
 msgstr "Dein Abo für diesen Kommentar wurde gelöscht."

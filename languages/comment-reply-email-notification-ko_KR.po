@@ -6,16 +6,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/comment-reply-"
 "email-notification\n"
 "POT-Creation-Date: 2016-01-25 00:22:29+00:00\n"
+"PO-Revision-Date: 2024-12-03 17:45+0900\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2022-06-23 11:09+0000\n"
-"Language-Team: Korean\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ko_KR"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: templates/cren/notification.php:3
 msgid "%s has replied to your comment on"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: classes/CommentReplyEmailNotification.php:147
 msgid "Check the subscription checkbox by default"
-msgstr ""
+msgstr "댓글 구독 체크박스 버튼 사용"
 
 #: templates/cren/notification.php:9
 msgid "Click here to reply"
@@ -35,11 +35,11 @@ msgstr "여기를 눌러서 답글을 남겨보세요"
 
 #: templates/cren/notification.php:11
 msgid "Click here to stop receiving these messages"
-msgstr "이런 이메일을 더 받으시기 싫다면 여기를 누르세요"
+msgstr "이메일 알림을 더 받으시기 싫다면 여기를 누르세요"
 
 #: classes/SubscriptionsTable.php:61
 msgid "Comment at"
-msgstr ""
+msgstr "댓글 시간"
 
 #. Name of the plugin
 #: classes/CommentReplyEmailNotification.php:37
@@ -52,33 +52,35 @@ msgstr "댓글 답글 이메일 알림"
 #: classes/CommentReplyEmailNotification.php:45
 #: classes/CommentReplyEmailNotification.php:195
 msgid "Comment subscriptions"
-msgstr ""
+msgstr "댓글 구독"
 
 #: classes/SubscriptionsTable.php:58
 msgid "Date"
-msgstr ""
+msgstr "시간"
 
 #: classes/CommentReplyEmailNotification.php:151
 msgid "Display the GDPR checkbox"
-msgstr ""
+msgstr "GDPR 확인 체크박스"
 
 #: classes/SubscriptionsTable.php:60
 msgid "E-Mail"
-msgstr ""
+msgstr "이메일"
 
 #: classes/CommentReplyEmailNotification.php:524
 msgid ""
 "Error: you must agree with the terms to send a comment. Hit the back button "
 "on your web browser and resubmit your comment if you agree with the terms."
 msgstr ""
+"오류: 댓글을 보내려면 GDPR 약관에 동의해야 합니다. 약관에 동의하시면 웹 브라"
+"우저의 뒤로 가기 버튼을 눌러 댓글을 다시 제출하세요."
 
 #: classes/CommentReplyEmailNotification.php:167
 msgid "For documentation about hooks, styling etc. please see the description"
-msgstr ""
+msgstr "후크, 스타일링 등에 대한 문서는 설명을 참조해주세요."
 
 #: classes/CommentReplyEmailNotification.php:141
 msgid "General"
-msgstr ""
+msgstr "일반"
 
 #: templates/cren/notification.php:1
 msgid "Hi %s"
@@ -95,25 +97,27 @@ msgstr ""
 #: classes/CommentReplyEmailNotification.php:474
 #, php-format
 msgid "I consent to %s collecting and storing the data I submit in this form."
-msgstr ""
+msgstr "%s가 이 양식에 제출한 데이터를 수집하고 저장하는 것에 동의합니다."
 
 #: classes/SubscriptionsTable.php:57
 msgid "ID"
-msgstr ""
+msgstr "아이디"
 
 #: classes/CommentReplyEmailNotification.php:168
 msgid ""
 "If you like my WordPress plugins and want to support my work I would be very "
 "happy about a donation via PayPal."
 msgstr ""
+"제 WordPress 플러그인을 마음에 드시고 제 작업을 지원하고 싶으시면, PayPal을 "
+"통한 기부를 매우 감사하게 생각하겠습니다."
 
 #: classes/CommentReplyEmailNotification.php:142
 msgid "Info"
-msgstr ""
+msgstr "플러그인 정보"
 
 #: classes/SubscriptionsTable.php:59
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: classes/CommentReplyEmailNotification.php:231
 msgid "New reply to your comment"
@@ -122,39 +126,41 @@ msgstr "당신의 댓글에 새로운 답글이 달렸습니다"
 #: classes/CommentReplyEmailNotification.php:364
 #: classes/CommentReplyEmailNotification.php:392
 msgid "Notify me via e-mail if anyone answers my comment."
-msgstr ""
+msgstr "누군가 제 댓글에 답글을 달면 이메일로 알려주세요."
 
 #: classes/CommentReplyEmailNotification.php:165
 msgid "Plugin version"
-msgstr ""
+msgstr "플러그인 버전"
 
 #: classes/CommentReplyEmailNotification.php:478
 msgid "Privacy Policy"
-msgstr ""
+msgstr "개인정보처리방침"
 
 #: classes/CommentReplyEmailNotification.php:159
 msgid "Privacy Policy URL"
-msgstr ""
+msgstr "개인정보처리방침 URL"
 
 #: classes/CommentReplyEmailNotification.php:155
 msgid "Send email notification when comment is approved"
-msgstr ""
+msgstr "댓글이 승인되면 이메일 알림 보내기"
 
 #. Description of the plugin
 msgid ""
 "Sends an email notification to the comment author when someone replies to "
 "his comment."
-msgstr "댓글에 답글이 등록됐을 때 작성자에게 이메일 알림을 보냅니다."
+msgstr ""
+"누군가 자신의 댓글에 답글을 달면 댓글 작성자에게 이메일 알림을 보냅니다."
 
 #: classes/CommentReplyEmailNotification.php:170
 msgid "Thank you :-)"
-msgstr ""
+msgstr "감사합니다"
 
 #: classes/CommentReplyEmailNotification.php:166
 msgid ""
 "This plugin allows visitors to subscribe to get answers to their comments "
 "via e-mail."
 msgstr ""
+"이 플러그인을 통해 방문자는 구독하여 의견에 대한 답변을 얻을 수 있습니다"
 
 #: classes/CommentReplyEmailNotification.php:330
 msgid "Your subscription for this comment has been cancelled."

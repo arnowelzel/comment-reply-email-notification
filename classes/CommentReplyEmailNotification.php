@@ -3,7 +3,7 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.35.0';
+    const CREN_VERSION = '1.36.0';
 
     /**
      * Constructor
@@ -349,7 +349,7 @@ class CommentReplyEmailNotification
                 exit;
             }
 
-            $userKey = filter_input(INPUT_GET, 'key', FILTER_SANITIZE_STRING);
+            $userKey = htmlspecialchars($_GET['key']);
             $realKey = $this->secretKey($commentId);
 
             if ($userKey != $realKey) {

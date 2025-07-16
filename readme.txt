@@ -8,6 +8,8 @@ Donate link: https://paypal.me/ArnoWelzel
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+This plugin allows visitors to subscribe to get answers to their comments via e-mail.
+
 == Description ==
 
 This plugin allows visitors to subscribe to get answers to their comments via e-mail.

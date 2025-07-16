@@ -3,7 +3,7 @@ namespace CommentReplyEmailNotification;
 
 class CommentReplyEmailNotification
 {
-    const CREN_VERSION = '1.36.0';
+    const CREN_VERSION = '1.37.0';
 
     /**
      * Constructor
